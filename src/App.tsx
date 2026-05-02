@@ -7,6 +7,7 @@
 
 import { memo, useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react'
 import { getCurrentUser } from '@nextcloud/auth'
+import { getDialogBuilder, DialogSeverity } from '@nextcloud/dialogs'
 import { translate as t } from '@nextcloud/l10n'
 import { loadState } from '@nextcloud/initial-state'
 import { Excalidraw as ExcalidrawComponent, useHandleLibrary, Sidebar, isElementLink } from '@nextcloud/excalidraw'
@@ -211,6 +212,35 @@ export default function App({
 			setIsTimerPinned(true)
 		}
 	}, [isTimerVisible, isTimerActive])
+
+	const handleResetCanvas = useCallback(() => {
+		if (!excalidrawAPI || isReadOnly) {
+			return
+		}
+
+		const dialog = getDialogBuilder(t('whiteboard', 'Reset the canvas'))
+			.setText(t('whiteboard', 'This will permanently remove all elements from this whiteboard. This action cannot be undone.'))
+			.setSeverity(DialogSeverity.Warning)
+			.setButtons([
+				{ label: t('whiteboard', 'Cancel'), type: 'tertiary' },
+				{
+					label: t('whiteboard', 'Reset'),
+					type: 'error',
+					callback: () => {
+						const api = useExcalidrawStore.getState().excalidrawAPI
+						if (!api) {
+							return
+						}
+						api.updateScene({ elements: [] })
+					},
+				},
+			])
+			.build()
+
+		dialog.show().catch((error) => {
+			logger.error('[App] Reset canvas dialog failed', { error })
+		})
+	}, [excalidrawAPI, isReadOnly])
 
 	// Voting
 	const { startVoting, vote, endVoting } = useVoting()
@@ -587,6 +617,7 @@ export default function App({
 							onToggleTimer={handleToggleTimer}
 							gridModeEnabled={gridModeEnabled}
 							onToggleGrid={() => setGridModeEnabled(!gridModeEnabled)}
+							onResetCanvas={isReadOnly ? undefined : handleResetCanvas}
 						/>
 					)}
 				</Excalidraw>

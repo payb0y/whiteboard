@@ -1,0 +1,1170 @@
+/**
+ * SPDX-FileCopyrightText: 2025 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+@use '../tokens' as tokens;
+
+:root {
+	--zIndex-popup: 100020 !important;
+}
+
+.widgets--list {
+	height: 100%;
+}
+
+.widgets--list > div {
+	height: 100% !important;
+}
+
+.widgets--list > div > div {
+	height: 100% !important;
+}
+
+.widget-custom {
+	height: 100%;
+	margin: 0 !important;
+}
+
+.widget-file--interactive {
+	height: 100% !important;
+	max-height: 100% !important;
+	min-height: unset !important;
+}
+
+.text-menubar--ready {
+	backdrop-filter: unset !important;
+	-webkit-backdrop-filter: unset !important;
+}
+
+.App {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	.App-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.App-loading,
+	.App-error {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		color: var(--color-main-text);
+
+		.retry-button {
+			margin-top: 16px;
+			padding: 8px 16px;
+			background-color: var(--color-primary);
+			color: var(--color-primary-text);
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: var(--color-primary-element-hover);
+	}
+}
+
+	.App-error {
+		color: var(--color-error);
+	}
+}
+
+.export-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 50px;
+
+	&__checkbox {
+		display: flex;
+	}
+}
+
+.ImageExportModal__preview__filename {
+	display: none;
+}
+
+.grid-toggle-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-background-hover) !important;
+	padding: 9px !important;
+	border: 1px solid var(--color-primary) !important;
+	border-radius: var(--border-radius-large) !important;
+	cursor: pointer;
+	transition: background-color 0.2s ease, box-shadow 0.2s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 10000; /* Ensure it's above other UI elements */
+	position: absolute;
+	bottom: 140px; /* Position above the network status */
+	inset-inline-end: 14px;
+	margin-inline-end: 0;
+
+	&:hover,
+	&.active {
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+		background-color: var(--color-primary) !important;
+	}
+}
+
+.network-status {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+	position: absolute;
+	bottom: 80px; /* Position at the bottom with enough space for other UI elements */
+	inset-inline-end: 16px;
+	z-index: 10000; /* Increased z-index to ensure it's above all other UI elements */
+	max-width: 40px;
+	cursor: pointer;
+	opacity: 0.9;
+	font-size: 13px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+	&__icon-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 24px;
+		min-height: 24px;
+	}
+
+	&__loading-spinner {
+		position: absolute;
+		top: 0;
+		inset-inline: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		max-width: 0;
+		opacity: 0;
+		transition: all 0.2s ease;
+	}
+
+	&__text {
+		white-space: nowrap;
+		margin-inline-start: 8px;
+		font-weight: 600;
+		font-size: 13px;
+	}
+
+	&--offline {
+		background-color: rgba(244, 67, 54, 0.2);
+		color: rgba(244, 67, 54, 1);
+		border: 1px solid rgba(244, 67, 54, 0.4);
+		/* Use will-change to isolate animation and prevent image flickering */
+		will-change: box-shadow, border-color;
+		transform: translateZ(0);
+		animation: pulse-red 2s infinite;
+	}
+
+	&--connecting {
+		background-color: rgba(255, 152, 0, 0.2);
+		color: rgba(255, 152, 0, 1);
+		border: 1px solid rgba(255, 152, 0, 0.4);
+		/* Use will-change to isolate animation and prevent image flickering */
+		will-change: box-shadow, border-color;
+		transform: translateZ(0);
+		animation: pulse-orange 2s infinite;
+	}
+
+	&--reconnecting {
+		background-color: rgba(255, 152, 0, 0.2);
+		color: rgba(255, 152, 0, 1);
+		border: 1px solid rgba(255, 152, 0, 0.4);
+		/* Use will-change to isolate animation and prevent image flickering */
+		will-change: box-shadow, border-color;
+		transform: translateZ(0);
+		animation: pulse-orange 2s infinite;
+	}
+
+	&--online {
+		background-color: rgba(76, 175, 80, 0.2);
+		color: rgba(76, 175, 80, 1);
+		border: 1px solid rgba(76, 175, 80, 0.4);
+	}
+
+	&--expanded {
+		max-width: 150px;
+		padding: 8px 12px;
+		z-index: 10001; /* Ensure expanded state is above other UI elements */
+		background-color: var(--color-main-background);
+
+		.network-status__content {
+			max-width: 110px;
+			opacity: 1;
+		}
+	}
+
+	&:hover {
+		opacity: 1;
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+		background-color: var(--color-main-background);
+		max-width: 150px;
+
+		.network-status__content {
+			max-width: 110px;
+			opacity: 1;
+		}
+	}
+
+	&:focus-visible {
+		@include tokens.focus-ring();
+	}
+}
+
+.App--version-preview {
+	.grid-toggle-button {
+		display: none;
+	}
+}
+
+.version-preview-banner {
+	position: absolute;
+	top: calc(var(--default-grid-baseline) * 2);
+	inset-inline-start: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: calc(var(--default-grid-baseline) * 2);
+	width: min(720px, calc(100% - 32px));
+	padding: calc(var(--default-grid-baseline) * 2.5);
+	background: var(--color-main-background);
+	color: var(--color-main-text);
+	border-radius: var(--border-radius-large);
+	box-shadow: 0 calc(var(--default-grid-baseline) / 2) calc(var(--default-grid-baseline) * 3)
+		var(--color-box-shadow);
+	z-index: 10100;
+}
+
+.version-preview-banner__content {
+	flex: 1;
+	min-width: 240px;
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--default-grid-baseline) / 2);
+}
+
+.version-preview-banner__title {
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.version-preview-banner__subtitle {
+	font-size: 0.875rem;
+	color: var(--color-text-maxcontrast);
+}
+
+.version-preview-banner__description {
+	font-size: 0.875rem;
+	color: var(--color-text-maxcontrast);
+	max-width: 52ch;
+}
+
+.version-preview-banner__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc(var(--default-grid-baseline));
+	align-items: center;
+}
+
+.version-preview-banner__button {
+	border: none;
+	border-radius: var(--border-radius);
+	font: inherit;
+	padding: 8px 16px;
+	cursor: pointer;
+	transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.version-preview-banner__button--primary {
+	background: var(--color-primary);
+	color: var(--color-primary-text);
+
+	&:hover:not(:disabled) {
+		background: var(--color-primary-element-hover);
+	}
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: wait;
+	}
+}
+
+.version-preview-banner__button--secondary {
+	background: transparent;
+	color: var(--color-main-text);
+	border: 1px solid var(--color-border);
+
+	&:hover {
+		background: var(--color-background-hover);
+	}
+}
+
+@media (max-width: 680px) {
+	.version-preview-banner {
+		align-items: stretch;
+	}
+
+	.version-preview-banner__actions {
+		width: 100%;
+		justify-content: flex-start;
+	}
+}
+
+/* Performance optimized animations that only animate opacity to reduce repaints */
+@keyframes pulse-red {
+	0% {
+		box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.4);
+		border-color: rgba(244, 67, 54, 0.4);
+		opacity: 0.9;
+	}
+	50% {
+		box-shadow: 0 0 0 5px rgba(244, 67, 54, 0.2);
+		border-color: rgba(244, 67, 54, 0.6);
+		opacity: 1;
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(244, 67, 54, 0);
+		border-color: rgba(244, 67, 54, 0.4);
+		opacity: 0.9;
+	}
+}
+
+@keyframes pulse-orange {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.4);
+		border-color: rgba(255, 152, 0, 0.4);
+		opacity: 0.9;
+	}
+	50% {
+		box-shadow: 0 0 0 5px rgba(255, 152, 0, 0.2);
+		border-color: rgba(255, 152, 0, 0.6);
+		opacity: 1;
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
+		border-color: rgba(255, 152, 0, 0.4);
+		opacity: 0.9;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	.network-status {
+		transition: none;
+		animation: none !important;
+
+		&__content {
+			transition: none;
+		}
+	}
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+	.network-status {
+		bottom: 90px;
+		inset-inline-end: 8px;
+		padding: 6px;
+		max-width: 36px;
+		z-index: 10001; /* Ensure it's above all UI elements on mobile */
+
+		&--expanded {
+			max-width: 130px;
+			padding: 6px 10px;
+		}
+
+		&:hover {
+			max-width: 130px;
+
+			.network-status__content {
+				max-width: 90px;
+			}
+		}
+	}
+}
+
+.App-loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	font-size: 1.2rem;
+	color: var(--color-main-text);
+}
+
+/* Auth Error Notification Styles */
+.auth-error-notification {
+	position: fixed;
+	top: 80px;
+	inset-inline-end: 20px;
+	max-width: 400px;
+	min-width: 300px;
+	z-index: 10000;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border: 1px solid;
+	animation: slideInFromRight 0.3s ease-out;
+
+	&--error {
+		background-color: var(--color-error-bg, #fef2f2);
+		border-color: var(--color-error, #dc2626);
+		color: var(--color-error-text, #991b1b);
+	}
+
+	&--warning {
+		background-color: var(--color-warning-bg, #fffbeb);
+		border-color: var(--color-warning, #f59e0b);
+		color: var(--color-warning-text, #92400e);
+	}
+
+	&--info {
+		background-color: var(--color-info-bg, #eff6ff);
+		border-color: var(--color-info, #3b82f6);
+		color: var(--color-info-text, #1e40af);
+	}
+
+	&__content {
+		display: flex;
+		align-items: flex-start;
+		padding: 16px;
+		gap: 12px;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		margin-top: 2px;
+	}
+
+	&__text {
+		flex: 1;
+		min-width: 0;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 14px;
+		margin-bottom: 4px;
+		line-height: 1.4;
+	}
+
+	&__message {
+		font-size: 13px;
+		line-height: 1.4;
+		margin-bottom: 8px;
+	}
+
+	&__details {
+		font-size: 12px;
+		opacity: 0.8;
+		line-height: 1.3;
+	}
+
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		flex-shrink: 0;
+	}
+
+	&__action-button,
+	&__close-button {
+		background: none;
+		border: none;
+		padding: 4px;
+		border-radius: 4px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.2s ease;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+			&:focus {
+				@include tokens.focus-ring(currentColor);
+			}
+		}
+	}
+
+@keyframes slideInFromRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+/* Responsive adjustments for auth error notification */
+@media (max-width: 768px) {
+	.auth-error-notification {
+		top: 70px;
+		inset-inline: 10px;
+		max-width: none;
+		min-width: 0;
+
+		&__content {
+			padding: 12px;
+			gap: 8px;
+		}
+
+		&__title {
+			font-size: 13px;
+		}
+
+		&__message {
+			font-size: 12px;
+		}
+
+		&__details {
+			font-size: 11px;
+		}
+	}
+}
+
+@media (prefers-reduced-motion) {
+	.auth-error-notification {
+		animation: none;
+	}
+
+	.recording-overlay {
+		.recording-status__spinner {
+			animation: none;
+		}
+	}
+}
+
+/* Recording styles */
+.recording-overlay {
+	pointer-events: none;
+
+	.recording-status {
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		border-radius: 8px;
+		background: var(--color-main-background);
+		border: 1px solid var(--color-border);
+		pointer-events: auto;
+		min-width: 240px;
+		color: var(--color-main-text);
+
+		&.recording {
+			border-color: var(--color-error);
+			border-inline-start: 3px solid var(--color-error);
+			padding-inline-start: 9px;
+		}
+
+		&.stopping {
+			border-color: var(--color-border);
+		}
+	}
+
+	.recording-status__content {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		width: 100%;
+	}
+
+	.recording-status__indicator {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: var(--color-error);
+	}
+
+	.recording-status__spinner {
+		width: 14px;
+		height: 14px;
+		border: 2px solid var(--color-loading-light);
+		border-top-color: var(--color-loading-dark);
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+	}
+
+	.recording-status__info {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.recording-status__title {
+		font-weight: 600;
+		font-size: 14px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		color: var(--color-main-text);
+	}
+
+	.recording-status__subtitle {
+		font-size: 12px;
+		color: var(--color-main-text);
+	}
+
+	.recording-status__duration {
+		font-variant-numeric: tabular-nums;
+	}
+
+	.recording-status__stop-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 6px 10px;
+		min-height: 36px;
+		border-radius: 6px;
+		border: 1px solid var(--color-error);
+		background: var(--color-error);
+		color: var(--color-primary-text);
+		font-size: 12px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color 0.15s ease, border-color 0.15s ease;
+
+		svg {
+			pointer-events: none;
+		}
+
+		&:hover {
+			background: var(--color-error-hover, #b91c1c);
+			border-color: var(--color-error-hover, #b91c1c);
+		}
+
+		&:focus-visible {
+			@include tokens.focus-ring(var(--color-error));
+		}
+	}
+
+	.recording-error {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 6px 12px;
+		border-radius: 6px;
+		background: var(--color-error);
+		color: var(--color-primary-text);
+		pointer-events: auto;
+		cursor: pointer;
+
+		small {
+			opacity: 0.8;
+			margin-inline-start: auto;
+		}
+	}
+
+	/* Nextcloud-style note cards for recording status */
+	.nc-notecard {
+		--note-background: var(--color-main-background);
+		--note-theme: var(--color-border);
+		pointer-events: auto;
+		background: var(--note-background);
+		border: 0;
+		border-inline-start: var(--default-grid-baseline) solid var(--note-theme);
+		border-radius: var(--border-radius);
+		padding: 16px;
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+		animation: slideInFromTop 0.3s ease-out;
+		min-width: 280px;
+		max-width: 400px;
+		position: relative; /* Ensure proper stacking context */
+		color: var(--color-main-text);
+
+		&--info {
+			--note-background: rgba(var(--color-info-rgb), 0.1);
+			--note-theme: var(--color-info);
+		}
+
+		&--success {
+			--note-background: rgba(var(--color-success-rgb), 0.1);
+			--note-theme: var(--color-success);
+		}
+
+		&--error {
+			--note-background: rgba(var(--color-error-rgb), 0.1);
+			--note-theme: var(--color-error);
+		}
+
+		&--warning {
+			--note-background: rgba(var(--color-warning-rgb), 0.1);
+			--note-theme: var(--color-warning);
+		}
+
+		.nc-notecard__icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			margin-top: 2px;
+			color: var(--note-theme);
+		}
+
+		.nc-notecard__content {
+			flex: 1;
+			min-width: 0;
+		}
+
+		.nc-notecard__text {
+			color: var(--color-main-text);
+			line-height: 1.4;
+			font-size: 14px;
+
+			strong {
+				font-weight: 600;
+			}
+		}
+
+		.nc-notecard__dismiss {
+			position: absolute;
+			top: 8px;
+			inset-inline-end: 8px;
+			background: transparent;
+			border: none;
+			color: var(--color-text-maxcontrast);
+			cursor: pointer;
+			padding: 8px;
+			border-radius: var(--border-radius);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 32px;
+			height: 32px;
+			z-index: 100; /* High z-index to ensure clickability */
+			
+			svg {
+				pointer-events: none; /* Ensure icon doesn't block clicks */
+			}
+
+			&:hover {
+				background: var(--color-background-hover);
+				color: var(--color-main-text);
+			}
+
+				&:focus-visible {
+					@include tokens.focus-ring(var(--color-primary-element));
+				}
+			}
+	}
+
+	/* Loading spinner matching Nextcloud style */
+	.nc-loading-icon {
+		width: 16px;
+		height: 16px;
+		border: 2px solid var(--color-border);
+		border-top: 2px solid var(--color-primary-element);
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+	}
+
+	/* Additional styles for recording notification content */
+	.recording-details {
+		margin-top: 8px;
+		font-size: 13px;
+		color: var(--color-text-lighter);
+
+		> div {
+			margin-bottom: 4px;
+		}
+
+		.recording-location {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			margin-top: 6px;
+		}
+
+		.recording-actions {
+			margin-top: 12px;
+		}
+	}
+
+	/* Starting status details */
+	.recording-starting-details {
+		margin-top: 8px;
+		font-size: 13px;
+		color: var(--color-text-lighter);
+		line-height: 1.4;
+
+		> div {
+			margin-bottom: 3px;
+		}
+	}
+
+	/* Nextcloud button styles for recording actions */
+	.nc-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 8px 16px;
+		border: none;
+		border-radius: var(--border-radius);
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: 500;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+
+		&--primary {
+			background: var(--color-primary-element);
+			color: var(--color-primary-element-text);
+
+			&:hover {
+				background: var(--color-primary-element-hover);
+			}
+		}
+
+		&--small {
+			padding: 6px 12px;
+			font-size: 13px;
+		}
+	}
+
+}
+}
+
+/* Recording button in menu */
+.recording-button {
+	&.recording {
+		background-color: var(--color-error-background);
+
+		svg {
+			color: var(--color-error);
+			animation: pulse 2s ease-in-out infinite;
+		}
+	}
+
+	&.disconnected {
+		opacity: 0.6;
+
+		svg {
+			color: var(--color-text-lighter);
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromTop {
+	from {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Draggable Dialog Component */
+.draggable-dialog {
+	user-select: none;
+	
+	&.dragging {
+		opacity: 0.9;
+		cursor: grabbing !important;
+		
+		* {
+			cursor: grabbing !important;
+		}
+	}
+	
+	&__handle {
+		position: absolute;
+		top: -30px;
+		inset-inline-start: 50%;
+		transform: translateX(-50%);
+		background: var(--color-main-background);
+		border: 1px solid var(--color-border);
+		border-radius: var(--border-radius) var(--border-radius) 0 0;
+		padding: 4px 12px;
+		cursor: grab;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-text-lighter);
+		transition: all 0.2s ease;
+		z-index: 1;
+		
+		&:hover {
+			background: var(--color-background-hover);
+			color: var(--color-main-text);
+		}
+		
+		&:active {
+			cursor: grabbing;
+		}
+		
+		svg {
+			pointer-events: none;
+		}
+	}
+	
+	&__content {
+		position: relative;
+	}
+}
+
+/* Presentation Components */
+.presentation-overlay {
+	pointer-events: none;
+
+	> * {
+		pointer-events: auto;
+	}
+}
+
+.presentation-status {
+	display: flex;
+	align-items: center;
+	padding: 12px 16px;
+	border-radius: 8px;
+	/* Ensure solid background that works in all themes */
+	background: var(--color-main-background);
+	background-color: rgb(var(--color-main-background-rgb, 255, 255, 255)); /* Fallback to white */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border: 1px solid var(--color-border);
+	animation: slideInFromTop 0.3s ease-out;
+	min-width: 280px;
+	z-index: 100010; /* Ensure it's above other elements */
+
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		width: 100%;
+	}
+
+	&__info {
+		flex: 1;
+		min-width: 0;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 14px;
+		color: var(--color-main-text);
+		margin-bottom: 2px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__live-indicator {
+		background: var(--color-error);
+		color: white;
+		font-size: 10px;
+		font-weight: 600;
+		padding: 2px 6px;
+		border-radius: 4px;
+		animation: pulse 2s ease-in-out infinite;
+		letter-spacing: 0.5px;
+	}
+
+	&__duration {
+		font-size: 12px;
+		color: var(--color-text-lighter);
+		font-family: monospace;
+	}
+
+	&__stop-btn, &__follow-btn {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 6px 12px;
+		border: none;
+		border-radius: 6px;
+		font-size: 12px;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.2s ease;
+
+		&:disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+		}
+	}
+
+	&__stop-btn {
+		background: var(--color-error);
+		color: white;
+
+		&:hover:not(:disabled) {
+			background: var(--color-error-hover);
+		}
+	}
+
+	&__follow-btn {
+		background: var(--color-background-hover);
+		color: var(--color-main-text);
+		border: 1px solid var(--color-border);
+
+		&:hover {
+			background: var(--color-background-dark);
+		}
+
+		&.active {
+			background: var(--color-primary-element);
+			color: var(--color-primary-element-text);
+			border-color: var(--color-primary-element);
+
+			&:hover {
+				background: var(--color-primary-element-hover);
+			}
+		}
+	}
+
+	&--presenting {
+		border-color: var(--color-primary-element);
+		background: var(--color-primary-element-light);
+		background-color: var(--color-primary-element-light); /* Ensure solid background */
+
+		svg {
+			color: var(--color-primary-element);
+		}
+	}
+
+	&--watching {
+		border-color: var(--color-warning);
+		background: var(--color-warning-background, #fffbeb); /* Add fallback */
+		background-color: var(--color-warning-background, #fffbeb); /* Ensure solid background */
+
+		svg {
+			color: var(--color-warning);
+		}
+	}
+}
+
+.presentation-error {
+	&__content {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 12px 16px;
+		border-radius: 8px;
+		background: var(--color-error-background, #fef2f2); /* Add fallback */
+		background-color: var(--color-error-background, #fef2f2); /* Ensure solid background */
+		border: 1px solid var(--color-error);
+		color: var(--color-error-text);
+		font-size: 14px;
+		animation: slideInFromTop 0.3s ease-out;
+		z-index: 100010; /* Ensure it's above other elements */
+
+		svg {
+			color: var(--color-error);
+			flex-shrink: 0;
+		}
+	}
+
+	&__close {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 8px; /* Increased padding for better click area */
+		margin: -8px -8px -8px 0; /* Negative margin to extend click area */
+		border-radius: 4px;
+		color: var(--color-error);
+		margin-inline-start: auto;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 32px;
+		min-height: 32px;
+		position: relative;
+		z-index: 1; /* Ensure it's clickable */
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.1);
+		}
+
+			&:focus-visible {
+				@include tokens.focus-ring(var(--color-error));
+			}
+		}
+	}
+
+/* Presentation button in menu */
+.presentation-button {
+	&--presenting {
+		background-color: var(--color-primary-element-light);
+
+		svg {
+			color: var(--color-primary-element);
+			animation: pulse 2s ease-in-out infinite;
+		}
+	}
+
+	&--starting {
+		opacity: 0.8;
+
+		svg {
+			animation: spin 1s linear infinite;
+		}
+	}
+
+	&--watching {
+		background-color: var(--color-warning-background);
+
+		svg {
+			color: var(--color-warning);
+		}
+	}
+
+	&--disconnected {
+		opacity: 0.6;
+
+		svg {
+			color: var(--color-text-lighter);
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

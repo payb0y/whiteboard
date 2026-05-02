@@ -1,0 +1,25 @@
+OC.L10N.register(
+    "whiteboard",
+    {
+    "Save settings" : "тохиргоог хадгалах",
+    "Advanced settings" : "Нарийвчилсан тохиргоо",
+    "Cancel" : "Cancel",
+    "Comments" : "Сэтгэгдлүүд",
+    "Dismiss" : "Арилгах",
+    "Edit" : "Өөрчлөх",
+    "Save" : "Хадгалах",
+    "Add a comment" : "сэтгэгдэл нэмэх",
+    "Send" : "илгээх",
+    "Connecting" : "холбож байгаа",
+    "Unknown" : "Үл танигдах зүйл",
+    "Unknown user" : "Тодорхойгүй хэрэглэгч",
+    "Paused" : "Зогсоосон",
+    "Finished" : "Дууссан",
+    "min" : "мин",
+    "Start" : "эхлэх",
+    "Reset" : "тохируулах",
+    "Pause" : "Түр зогсоох",
+    "Open" : "Нээх",
+    "Just now" : "яг одоо"
+},
+"nplurals=2; plural=(n != 1);");

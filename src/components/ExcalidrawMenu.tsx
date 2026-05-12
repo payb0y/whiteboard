@@ -192,18 +192,18 @@ export const ExcalidrawMenu = memo(function ExcalidrawMenu({ fileNameWithoutExte
 				shortcut={isMacPlatform ? '⌘+⌥+S' : 'Ctrl+Alt+S'}>
 				{t('whiteboard', 'Download screenshot')}
 			</MainMenu.Item>
-			<MainMenu.Item
+			{/* <MainMenu.Item
 				icon={<Icon path={mdiVote} size="16px" />}
 				onSelect={() => showVotings()}>
 				{t('whiteboard', 'Votings')}
-			</MainMenu.Item>
+			</MainMenu.Item> */}
 			<MainMenu.Item
 				icon={<Icon path={mdiMagnify} size={0.75} />}
 				onSelect={openLibrarySearch}
 				shortcut={isMacPlatform ? '⌘+F' : 'Ctrl+F'}>
 				{t('whiteboard', 'Find text on canvas')}
 			</MainMenu.Item>
-			<RecordingMenuItem
+			{/* <RecordingMenuItem
 				isRecording={recordingState.isRecording}
 				isStarting={recordingState.isStarting}
 				isStopping={recordingState.isStopping}
@@ -212,13 +212,13 @@ export const ExcalidrawMenu = memo(function ExcalidrawMenu({ fileNameWithoutExte
 				isConnected={recordingState.isConnected}
 				isAvailable={recordingState.isAvailable}
 				unavailableReason={recordingState.unavailableReason}
-			/>
+			/> */}
 			<MainMenu.Item
 				icon={<Icon path={mdiTimerOutline} size={0.9} />}
 				onSelect={onToggleTimer}>
 				{isTimerVisible ? t('whiteboard', 'Hide timer') : t('whiteboard', 'Show timer')}
 			</MainMenu.Item>
-			<PresentationMenuItem
+			{/* <PresentationMenuItem
 				isPresenting={presentationState.isPresenting}
 				isPresentationMode={presentationState.isPresentationMode}
 				presenterName={presentationState.presenterName}
@@ -227,7 +227,7 @@ export const ExcalidrawMenu = memo(function ExcalidrawMenu({ fileNameWithoutExte
 				startPresentation={presentationState.startPresentation}
 				stopPresentation={presentationState.stopPresentation}
 				isConnected={presentationState.isConnected}
-			/>
+			/> */}
 			<CreatorMenuItem />
 			<MainMenu.Item
 				icon={<Icon path={mdiGrid} size={0.75} />}

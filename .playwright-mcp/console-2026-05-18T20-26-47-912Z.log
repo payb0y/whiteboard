@@ -1,0 +1,534 @@
+[     179ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps-extra/profiler/css/profiler-toolbar.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/files/108?dir=/&openfile=true:0
+[     179ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps/files_versions/css/sidebar-tab.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/files/108?dir=/&openfile=true:0
+[     344ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     344ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     481ms] [WARNING] [WARN] viewer: Some mimes were ignored because they are not enabled in the server previews config {app: viewer, uid: admin, level: 0, ignoredMimes: Array(4)} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[     485ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     485ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     531ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     531ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     765ms] [INFO] [INFO] files: Initializing unified search plugin: folder search from files app {app: files, uid: admin, level: 0} @ http://127.0.0.1:8088/dist/core-common.js:0
+[     766ms] [INFO] [INFO] viewer: 5 viewer handlers registered {app: viewer, uid: admin, level: 0, handlers: Array(5)} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[     767ms] [INFO] [INFO] core: session heartbeat polling started {app: core, uid: admin, level: 0} @ http://127.0.0.1:8088/dist/core-common.js:0
+[     778ms] [WARNING] [WARN] @nextcloud/vue: You need to fill either the text or the ariaLabel props in the button component. {uid: admin, app: @nextcloud/vue, level: 0, text: undefined, ariaLabel: null} @ http://127.0.0.1:8088/dist/core-common.js:0
+[     800ms] [WARNING] [WARN] @nextcloud/vue: You need to fill either the text or the ariaLabel props in the button component. {uid: admin, app: @nextcloud/vue, level: 0, text: undefined, ariaLabel: null} @ http://127.0.0.1:8088/dist/core-common.js:0
+[    1037ms] [INFO] [INFO] viewer: Opening viewer for file  {app: viewer, uid: admin, level: 0, path: /New whiteboard.whiteboard} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[    1039ms] [WARNING] [WARN] viewer: No files provided, skipping update {app: viewer, uid: admin, level: 0} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[    1442ms] [LOG] [Collaboration] No fileId, disconnecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1443ms] [LOG] [Permissions] Initial setup with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1443ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.354Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1443ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1443ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.355Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1444ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1446ms] [WARNING] Table button not shown: Text app createTable API is not available @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1008
+[    1448ms] [LOG] [Collaboration] FileId 108 active, connecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1448ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.359Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1448ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1449ms] [LOG] [Permissions] JWT indicates write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1450ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1451ms] [LOG] [Collaboration] Creating new socket instance @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1468ms] [LOG] [Recording] Socket reconnected, checking availability @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1469ms] [LOG] [Collaboration] Received init-room event from server, initiating room join @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1469ms] [LOG] [Collaboration] Force reset room join tracking (was: null) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1469ms] [LOG] [Collaboration] Fallback: Setting status to online based on init-room + socket.connected (was: connecting) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1469ms] [LOG] [Collaboration] Joining room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1469ms] [LOG] [Collaboration] Debounced join room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1473ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1473ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1473ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1474ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1474ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1474ms] [LOG] [Collaboration] Sync designation received: true @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1475ms] [LOG] [Sync] SYNCER STATUS: DESIGNATED AS SYNCER @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1476ms] [LOG] [Collaboration] Room user change: 3 users @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1476ms] [LOG] [Collaboration] User joined: admin (admin) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1477ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.388Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1477ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1479ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1524ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1528ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1583ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1655ms] [LOG] [Collaboration] Unmounting, performing full cleanup @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1655ms] [LOG] [Collaboration] Disconnecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1667ms] [LOG] [Collaboration] FileId 108 active, connecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1667ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.579Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1668ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1668ms] [LOG] [Permissions] Excalidraw API available, applying current read-only state: false @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1668ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1668ms] [LOG] [Permissions] Refreshing from JWT with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1668ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.579Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1668ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1668ms] [LOG] [Permissions] Initial setup with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1668ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.580Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1668ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1672ms] [LOG] [Sync] Executing final sync on page leave @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1673ms] [LOG] [Sync] Using cached state with 0 elements @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1738ms] [LOG] [Sync] Final sync done, status: 200 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1746ms] [LOG] [Sync] SYNCER STATUS: NOT SYNCER @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1760ms] [LOG] [Collaboration] Creating new socket instance @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1760ms] [LOG] [Permissions] JWT indicates write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1761ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1761ms] [LOG] [Permissions] JWT indicates write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1761ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1835ms] [LOG] [Recording] Socket reconnected, checking availability @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1835ms] [LOG] [Collaboration] Received init-room event from server, initiating room join @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1835ms] [LOG] [Collaboration] Force reset room join tracking (was: null) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1835ms] [LOG] [Collaboration] Fallback: Setting status to online based on init-room + socket.connected (was: connecting) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1835ms] [LOG] [Collaboration] Joining room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1835ms] [LOG] [Collaboration] Debounced join room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1839ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.750Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1839ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1862ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1862ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1862ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1862ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1863ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1863ms] [LOG] [Collaboration] Sync designation received: true @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1865ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.776Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1865ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1866ms] [LOG] [Sync] SYNCER STATUS: DESIGNATED AS SYNCER @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1871ms] [LOG] [Collaboration] Room user change: 3 users @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1871ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.782Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1871ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1877ms] [LOG] [Collaboration] Updated collaborators: 2 users online (filtered out current user) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1878ms] [LOG] [Collaboration] User joined: admin (admin) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1878ms] [LOG] [Collaboration] Broadcasting images to new user: admin @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    1882ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:1011
+[    1969ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.880Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1969ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1988ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[    1990ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[    2027ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 53 seconds (at 2026-05-18T20:27:42.939Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2028ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2090ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.002Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2091ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2189ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.101Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2189ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2258ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.170Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2258ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2344ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    2423ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    2445ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.357Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2445ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2573ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.484Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2573ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2633ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.544Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2633ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2737ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.649Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2737ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2788ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    2793ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.704Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2793ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2882ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.793Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2882ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2891ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    2939ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.851Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2940ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2954ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    2958ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    3006ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 52 seconds (at 2026-05-18T20:27:42.918Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3007ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3016ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    3067ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    3107ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.019Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3107ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3168ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.080Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3169ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3263ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.174Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3263ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3288ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    3369ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.280Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3369ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3392ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    3426ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.337Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3426ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3513ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.425Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3513ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3589ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.500Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3589ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3644ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.556Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3645ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3744ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.655Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3744ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3850ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.761Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3850ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3907ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.818Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3907ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    3913ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    4063ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 51 seconds (at 2026-05-18T20:27:42.974Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4063ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4137ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.048Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4137ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4191ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.103Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4191ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4292ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.204Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4292ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4411ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    4444ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.356Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4444ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4553ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.465Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4553ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4702ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.613Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4702ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4811ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.723Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4811ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4868ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.780Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4868ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    4992ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5042ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 50 seconds (at 2026-05-18T20:27:42.953Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5042ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5133ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.045Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5133ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5197ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.108Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5197ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5252ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.163Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5252ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5356ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.267Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5356ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5408ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.320Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5408ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5459ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5466ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5515ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.427Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5516ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5575ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.486Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5575ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5613ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5618ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5664ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.575Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5664ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5670ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5726ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5761ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.672Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5761ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5816ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.728Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5817ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5841ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5883ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.795Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5884ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5892ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5951ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5969ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5970ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    5985ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.897Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    5985ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6022ms] [LOG] [Collaboration] Viewport update received from user alice {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    6072ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 49 seconds (at 2026-05-18T20:27:42.984Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6073ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6303ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.215Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6304ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6407ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.319Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6408ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6474ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    6543ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    6691ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.602Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6691ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6746ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.658Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6746ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6850ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.761Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6850ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6906ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.818Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6906ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6961ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.872Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    6961ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7036ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 48 seconds (at 2026-05-18T20:27:42.948Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7037ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7064ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    7114ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.026Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7114ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7563ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.475Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7563ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7571ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    7620ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.532Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7621ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7713ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.625Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7713ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7768ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.679Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7768ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7878ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.790Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7878ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7940ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.851Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7940ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7996ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 47 seconds (at 2026-05-18T20:27:42.907Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    7996ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8094ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    8098ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 46 seconds (at 2026-05-18T20:27:42.009Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8098ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8153ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 46 seconds (at 2026-05-18T20:27:42.065Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8153ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8243ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 46 seconds (at 2026-05-18T20:27:42.155Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8244ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8303ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 46 seconds (at 2026-05-18T20:27:42.215Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8304ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8359ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 46 seconds (at 2026-05-18T20:27:42.271Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8359ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8457ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 46 seconds (at 2026-05-18T20:27:42.368Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8457ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8533ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 46 seconds (at 2026-05-18T20:27:42.444Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8533ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    8593ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    9183ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 45 seconds (at 2026-05-18T20:27:42.094Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9183ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9189ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[    9239ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 45 seconds (at 2026-05-18T20:27:42.150Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9239ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9333ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 45 seconds (at 2026-05-18T20:27:42.245Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9333ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9394ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 45 seconds (at 2026-05-18T20:27:42.305Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9394ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9502ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 45 seconds (at 2026-05-18T20:27:42.413Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9502ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9733ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10516ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 44 seconds (at 2026-05-18T20:27:42.428Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10517ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10523ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10663ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 44 seconds (at 2026-05-18T20:27:42.575Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10663ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10679ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10718ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 44 seconds (at 2026-05-18T20:27:42.630Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10719ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10736ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10772ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 44 seconds (at 2026-05-18T20:27:42.683Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10772ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10788ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10840ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10872ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 44 seconds (at 2026-05-18T20:27:42.784Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10872ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10924ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10941ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   10974ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 44 seconds (at 2026-05-18T20:27:42.885Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10974ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   10999ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11021ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11031ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 44 seconds (at 2026-05-18T20:27:42.942Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11031ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11075ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11109ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11124ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.036Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11125ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11159ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11179ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11182ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.093Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11182ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11209ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11259ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11285ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.197Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11285ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11312ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11340ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.252Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11340ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11362ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11421ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11436ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.347Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11436ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11471ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11492ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.403Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11492ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11530ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11584ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11633ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.545Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11633ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11638ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11648ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11683ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.595Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11684ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11695ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11745ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.657Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11745ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11752ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11801ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.712Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11801ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11808ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11857ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11858ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.769Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11858ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11865ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.776Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11865ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11913ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   11960ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.872Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11961ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11967ms] [LOG] [Collaboration] Viewport update received from user shared_5DfrkWssf7jyw52_b6ec79c99f23e258 {followedUserId: null, presenterId: null, isPresentationMode: false, autoFollowPresenter: true, payload: Object} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   12021ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   12022ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   12062ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 43 seconds (at 2026-05-18T20:27:42.974Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12062ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12068ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   12118ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.030Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12119ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12195ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   12204ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.115Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12204ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12263ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.174Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12263ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12364ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.275Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12364ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12542ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.454Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12543ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12613ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   12664ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.575Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12664ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12754ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.665Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12754ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12823ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.735Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12824ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12829ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   12887ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.798Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12887ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13015ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.926Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13015ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13070ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 42 seconds (at 2026-05-18T20:27:42.981Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13070ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13127ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 41 seconds (at 2026-05-18T20:27:42.039Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13127ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13170ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   13193ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 41 seconds (at 2026-05-18T20:27:42.105Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13193ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13373ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   13916ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   15849ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 39 seconds (at 2026-05-18T20:27:42.760Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   15849ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   15857ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   16033ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 39 seconds (at 2026-05-18T20:27:42.945Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   16034ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   16484ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   16494ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   17440ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   21867ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 33 seconds (at 2026-05-18T20:27:42.778Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   21867ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   22016ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   22017ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   31868ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 23 seconds (at 2026-05-18T20:27:42.780Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   31869ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   31872ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 23 seconds (at 2026-05-18T20:27:42.783Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   31872ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   32017ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   32018ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   33500ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   41872ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 13 seconds (at 2026-05-18T20:27:42.783Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   41872ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   42009ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   42009ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   50328ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   50874ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 4 seconds (at 2026-05-18T20:27:42.785Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   50874ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   50978ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   51022ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 4 seconds (at 2026-05-18T20:27:42.934Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51023ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51122ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.034Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51123ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51177ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.089Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51178ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51277ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.188Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51277ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51337ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.248Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51337ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51429ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.341Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51430ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51484ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   51485ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.396Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51485ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51622ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.534Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51622ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51681ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.593Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51682ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51781ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.692Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51781ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51837ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.748Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51837ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51874ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.786Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51874ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51933ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.845Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51933ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51996ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.908Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51996ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52004ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   52019ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   52019ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   52052ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 3 seconds (at 2026-05-18T20:27:42.963Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52052ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52242ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.154Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52243ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52309ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.220Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52309ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52399ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.310Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52399ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52502ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.414Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52502ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52509ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   52558ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.469Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52558ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52651ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.562Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52651ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52718ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.630Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52718ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52772ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.684Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52773ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52879ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.790Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52879ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52951ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.863Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   52952ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53006ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 2 seconds (at 2026-05-18T20:27:42.917Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53006ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53011ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   53151ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.063Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53151ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53205ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.117Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53206ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53260ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.172Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53260ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53315ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.227Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53316ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53396ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.307Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53396ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53451ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.362Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53451ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53552ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.464Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53552ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53559ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   53608ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.520Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53609ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53691ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.602Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53691ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53752ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.663Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53752ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53858ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 1 seconds (at 2026-05-18T20:27:42.769Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   53858ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   54439ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   54858ms] [LOG] [JWTStore] Auto-refresh timer triggered for room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   54858ms] [LOG] [JWTStore] Refreshing JWT for room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   54919ms] [LOG] [JWTStore] JWT refreshed for room 108, expires at 2026-05-18T20:42:42.000Z @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   54919ms] [LOG] [JWTStore] JWT indicates write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   54922ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 810 seconds (at 2026-05-18T20:41:12.833Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   61875ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 803 seconds (at 2026-05-18T20:41:12.786Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   61875ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   62021ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   62021ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   62735ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-BkcwhgGC.chunk.mjs:23
+[   71877ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 793 seconds (at 2026-05-18T20:41:12.789Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   71877ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   71879ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 793 seconds (at 2026-05-18T20:41:12.791Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   71880ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   72024ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   72025ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   81880ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 783 seconds (at 2026-05-18T20:41:12.791Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   81880ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   82023ms] [ERROR] [SyncWorker] Error syncing to server: Error: Server responded with status: 500 - {"message":"file_put_contents failed"}
+    at Og (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13086)
+    at async Rg (http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:30:13872) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/syncWorker-CQ1qnLDv.js:29
+[   82023ms] [ERROR] [SyncStore] Worker server sync error: Server responded with status: 500 - {"message":"file_put_contents failed"} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2

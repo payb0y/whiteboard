@@ -1,0 +1,62 @@
+[     166ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps-extra/profiler/css/profiler-toolbar.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/:0
+[     167ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps/files_versions/css/sidebar-tab.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/:0
+[     174ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps-extra/profiler/css/profiler-toolbar.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/:0
+[     175ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps/files_versions/css/sidebar-tab.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/:0
+[     364ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     365ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     491ms] [WARNING] [WARN] viewer: Some mimes were ignored because they are not enabled in the server previews config {app: viewer, uid: admin, level: 0, ignoredMimes: Array(4)} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[     496ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     496ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     572ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     572ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[    1041ms] [INFO] [INFO] files: Initializing unified search plugin: folder search from files app {app: files, uid: admin, level: 0} @ http://127.0.0.1:8088/dist/core-common.js:0
+[    1043ms] [INFO] [INFO] viewer: 5 viewer handlers registered {app: viewer, uid: admin, level: 0, handlers: Array(5)} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[    1043ms] [INFO] [INFO] core: session heartbeat polling started {app: core, uid: admin, level: 0} @ http://127.0.0.1:8088/dist/core-common.js:0
+[    1055ms] [WARNING] [WARN] @nextcloud/vue: You need to fill either the text or the ariaLabel props in the button component. {uid: admin, app: @nextcloud/vue, level: 0, text: undefined, ariaLabel: null} @ http://127.0.0.1:8088/dist/core-common.js:0
+[    1077ms] [WARNING] [WARN] @nextcloud/vue: You need to fill either the text or the ariaLabel props in the button component. {uid: admin, app: @nextcloud/vue, level: 0, text: undefined, ariaLabel: null} @ http://127.0.0.1:8088/dist/core-common.js:0
+[   13801ms] [INFO] [INFO] viewer: Opening viewer for file  {app: viewer, uid: admin, level: 0, path: /New whiteboard.whiteboard} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[   13804ms] [WARNING] [WARN] viewer: No files provided, skipping update {app: viewer, uid: admin, level: 0} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[   14287ms] [LOG] [Collaboration] No fileId, disconnecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   14288ms] [LOG] [Permissions] Initial setup with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[   14288ms] [LOG] [JWTStore] Refreshing JWT for room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14292ms] [LOG] [JWTStore] Token refresh already in progress, waiting for it to complete @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14294ms] [WARNING] Table button not shown: Text app createTable API is not available @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1008
+[   14295ms] [LOG] [Collaboration] FileId 108 active, connecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   14296ms] [LOG] [JWTStore] Token refresh already in progress, waiting for it to complete @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14330ms] [LOG] [JWTStore] Token refresh already in progress, waiting for it to complete @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14371ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:8088/index.php/apps/whiteboard/108/token:0
+[   14372ms] [ERROR] [JWTStore] Error refreshing JWT: AxiosError: Request failed with status code 500
+    at Ht (http://127.0.0.1:8088/apps-shared/whiteboard/js/index-BB2Ykc4b.chunk.mjs:4:1079)
+    at XMLHttpRequest.b (http://127.0.0.1:8088/apps-shared/whiteboard/js/index-BB2Ykc4b.chunk.mjs:4:6286) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14372ms] [WARNING] [JWTStore] No token available after refresh failure, enforcing read-only mode @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14373ms] [ERROR] [Collaboration] Connection initiation failed: Error: JWT token missing.
+    at http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:24:107639 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   14374ms] [ERROR] [BoardDataManager] Failed to get JWT token for server data fetch @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2
+[   14467ms] [LOG] [Collaboration] Unmounting, performing full cleanup @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   14476ms] [LOG] [Collaboration] FileId 108 active, connecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   14476ms] [LOG] [JWTStore] Refreshing JWT for room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14477ms] [LOG] [Permissions] Excalidraw API available, applying current read-only state: true @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[   14477ms] [LOG] [Permissions] User has read-only access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[   14477ms] [LOG] [Permissions] Refreshing from JWT with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[   14477ms] [LOG] [JWTStore] Token refresh already in progress, waiting for it to complete @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14477ms] [LOG] [Permissions] Initial setup with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[   14477ms] [LOG] [JWTStore] Token refresh already in progress, waiting for it to complete @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14543ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:8088/index.php/apps/whiteboard/108/token:0
+[   14543ms] [ERROR] [JWTStore] Error refreshing JWT: AxiosError: Request failed with status code 500
+    at Ht (http://127.0.0.1:8088/apps-shared/whiteboard/js/index-BB2Ykc4b.chunk.mjs:4:1079)
+    at XMLHttpRequest.b (http://127.0.0.1:8088/apps-shared/whiteboard/js/index-BB2Ykc4b.chunk.mjs:4:6286) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14543ms] [WARNING] [JWTStore] No token available after refresh failure, enforcing read-only mode @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14550ms] [ERROR] [Collaboration] Connection initiation failed: Error: JWT token missing.
+    at http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:24:107639 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   15294ms] [LOG] [JWTStore] Refreshing JWT for room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   15367ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://127.0.0.1:8088/index.php/apps/whiteboard/108/token:0
+[   15368ms] [ERROR] [JWTStore] Error refreshing JWT: AxiosError: Request failed with status code 500
+    at Ht (http://127.0.0.1:8088/apps-shared/whiteboard/js/index-BB2Ykc4b.chunk.mjs:4:1079)
+    at XMLHttpRequest.b (http://127.0.0.1:8088/apps-shared/whiteboard/js/index-BB2Ykc4b.chunk.mjs:4:6286)
+    at U.request (http://127.0.0.1:8088/apps-shared/whiteboard/js/index-BB2Ykc4b.chunk.mjs:6:2128)
+    at async Object.refreshJWT (http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:2:9640)
+    at async getJWT (http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:2:9183)
+    at async http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1012:45295
+    at async http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1300:4582 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   15368ms] [WARNING] [JWTStore] No token available after refresh failure, enforcing read-only mode @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   15374ms] [WARNING] [Library] No JWT found, cannot fetch library @ http://127.0.0.1:8088/apps-shared/whiteboard/js/whiteboard-main.mjs:2

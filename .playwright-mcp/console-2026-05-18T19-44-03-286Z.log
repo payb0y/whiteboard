@@ -1,0 +1,11 @@
+[       4ms] [LOG] [Sync] Page unloading - syncing as dedicated syncer @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1011
+[       5ms] [LOG] [Sync] Executing final sync on page leave @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1011
+[       5ms] [LOG] [Sync] Using cached state with 10 elements @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1011
+[       5ms] [ERROR] [Sync] Final sync failed: NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://127.0.0.1:8088/index.php/apps/whiteboard/108': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.
+    at http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1012:44435
+    at W (http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1012:44712) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1011
+[       8ms] [LOG] [Sync] Executing final sync on page leave @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1011
+[       8ms] [LOG] [Sync] Using cached state with 10 elements @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1011
+[       8ms] [ERROR] [Sync] Final sync failed: NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://127.0.0.1:8088/index.php/apps/whiteboard/108': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.
+    at http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1012:44435
+    at HTMLDocument.$ (http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1012:44807) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-Cy7iH5zX.chunk.mjs:1011

@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#app-dashboard"
+  - banner [ref=e4]:
+    - link "Go to Dashboard" [ref=e6] [cursor=pointer]:
+      - /url: /index.php
+    - generic [ref=e8]:
+      - button "Unified search" [ref=e11] [cursor=pointer]:
+        - img [ref=e14]:
+          - img [ref=e15]
+      - button "Search contacts" [ref=e18] [cursor=pointer]:
+        - img [ref=e21]:
+          - img [ref=e22]
+      - navigation "Settings menu" [ref=e24]:
+        - button "Settings menu" [ref=e25] [cursor=pointer]:
+          - img [ref=e29]:
+            - img [ref=e30]
+        - generic [ref=e32]: Avatar of admin — Online
+  - generic [ref=e33]:
+    - heading "Dashboard" [level=1] [ref=e34]
+    - main [ref=e35]:
+      - heading "Good evening" [level=2] [ref=e36]
+      - list
+      - generic [ref=e38]:
+        - heading "Recommended files" [level=2] [ref=e40]: Recommended files
+        - list [ref=e44]:
+          - listitem [ref=e45]:
+            - generic "/New whiteboard.whiteboard" [ref=e46] [cursor=pointer]:
+              - generic [ref=e48]:
+                - generic [ref=e49]: New whiteboard.whiteboard
+                - generic [ref=e50]: Last updated a few seconds ago
+                - generic [ref=e51]: Path name /New whiteboard.whiteboard
+      - button "Customize" [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]:
+          - img [ref=e56]:
+            - img [ref=e57]
+          - generic [ref=e59]: Customize
+  - navigation "Custom application sidebar" [ref=e60]:
+    - button "Toggle sidebar" [ref=e62] [cursor=pointer]:
+      - img [ref=e63]
+    - generic [ref=e65]:
+      - link "Dashboard" [ref=e67] [cursor=pointer]:
+        - /url: /index.php/apps/dashboard/
+        - img [ref=e69]
+        - generic [ref=e70]: Dashboard
+      - link "Files" [ref=e72] [cursor=pointer]:
+        - /url: /index.php/apps/files/
+        - img [ref=e74]
+        - generic [ref=e75]: Files
+    - link "More apps" [ref=e77] [cursor=pointer]:
+      - /url: /index.php/settings/apps
+      - img [ref=e79]
+      - generic [ref=e80]: More apps

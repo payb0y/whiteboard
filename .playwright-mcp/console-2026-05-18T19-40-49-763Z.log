@@ -1,0 +1,150 @@
+[       4ms] [LOG] [Sync] Page unloading - syncing as dedicated syncer @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[       4ms] [LOG] [Sync] Executing final sync on page leave @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[       4ms] [LOG] [Sync] Using cached state with 10 elements @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[       5ms] [ERROR] [Sync] Final sync failed: NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://127.0.0.1:8088/index.php/apps/whiteboard/108': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.
+    at http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1012:44451
+    at z (http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1012:44728) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[     133ms] [LOG] [Sync] Executing final sync on page leave @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[     133ms] [LOG] [Sync] Using cached state with 10 elements @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[     134ms] [ERROR] [Sync] Final sync failed: NetworkError: Failed to execute 'send' on 'XMLHttpRequest': Failed to load 'http://127.0.0.1:8088/index.php/apps/whiteboard/108': Synchronous XHR in page dismissal. See https://www.chromestatus.com/feature/4664843055398912 for more details.
+    at http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1012:44451
+    at HTMLDocument.Y (http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1012:44823) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[     153ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps-extra/profiler/css/profiler-toolbar.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/files/108?dir=/&openfile=true&_v=2:0
+[     153ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps/files_versions/css/sidebar-tab.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/files/108?dir=/&openfile=true&_v=2:0
+[     167ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps-extra/profiler/css/profiler-toolbar.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/files/108?dir=/&openfile=true&_v=2:0
+[     167ms] [ERROR] Refused to apply style from 'http://127.0.0.1:8088/apps/files_versions/css/sidebar-tab.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://127.0.0.1:8088/index.php/apps/files/files/108?dir=/&openfile=true&_v=2:0
+[     360ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     361ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     480ms] [WARNING] [WARN] viewer: Some mimes were ignored because they are not enabled in the server previews config {app: viewer, uid: admin, level: 0, ignoredMimes: Array(4)} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[     484ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     484ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     532ms] [WARNING] jQuery is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     533ms] [WARNING] $ is deprecated: The global jQuery is deprecated. It will be removed in a later versions without another warning. Please ship your own. @ http://127.0.0.1:8088/dist/core-main.js:0
+[     743ms] [INFO] [INFO] files: Initializing unified search plugin: folder search from files app {app: files, uid: admin, level: 0} @ http://127.0.0.1:8088/dist/core-common.js:0
+[     744ms] [INFO] [INFO] viewer: 5 viewer handlers registered {app: viewer, uid: admin, level: 0, handlers: Array(5)} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[     745ms] [INFO] [INFO] core: session heartbeat polling started {app: core, uid: admin, level: 0} @ http://127.0.0.1:8088/dist/core-common.js:0
+[     754ms] [WARNING] [WARN] @nextcloud/vue: You need to fill either the text or the ariaLabel props in the button component. {uid: admin, app: @nextcloud/vue, level: 0, text: undefined, ariaLabel: null} @ http://127.0.0.1:8088/dist/core-common.js:0
+[     770ms] [WARNING] [WARN] @nextcloud/vue: You need to fill either the text or the ariaLabel props in the button component. {uid: admin, app: @nextcloud/vue, level: 0, text: undefined, ariaLabel: null} @ http://127.0.0.1:8088/dist/core-common.js:0
+[     974ms] [INFO] [INFO] viewer: Opening viewer for file  {app: viewer, uid: admin, level: 0, path: /New whiteboard.whiteboard} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[     977ms] [WARNING] [WARN] viewer: No files provided, skipping update {app: viewer, uid: admin, level: 0} @ http://127.0.0.1:8088/apps-extra/viewer/js/previewUtils-Bz9VYbC0.chunk.mjs:4
+[    1279ms] [LOG] [Collaboration] No fileId, disconnecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1279ms] [LOG] [Permissions] Initial setup with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1279ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.042Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1279ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1280ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.042Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1280ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1280ms] [WARNING] Table button not shown: Text app createTable API is not available @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1008
+[    1282ms] [LOG] [Collaboration] FileId 108 active, connecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1282ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.045Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1282ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1284ms] [LOG] [Permissions] JWT indicates write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1284ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1284ms] [LOG] [Collaboration] Creating new socket instance @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1297ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.060Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1298ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1302ms] [LOG] [Recording] Socket reconnected, checking availability @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1303ms] [LOG] [Collaboration] Received init-room event from server, initiating room join @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1303ms] [LOG] [Collaboration] Force reset room join tracking (was: null) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1303ms] [LOG] [Collaboration] Fallback: Setting status to online based on init-room + socket.connected (was: connecting) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1303ms] [LOG] [Collaboration] Joining room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1303ms] [LOG] [Collaboration] Debounced join room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1304ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1305ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1305ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1306ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1306ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1307ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1307ms] [LOG] [Collaboration] Sync designation received: true @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1308ms] [LOG] [Sync] SYNCER STATUS: DESIGNATED AS SYNCER @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1308ms] [LOG] [Collaboration] Room user change: 2 users @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1309ms] [LOG] [Collaboration] User joined: admin (admin) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1312ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1462ms] [LOG] [Collaboration] Unmounting, performing full cleanup @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1462ms] [LOG] [Collaboration] Disconnecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1472ms] [LOG] [Collaboration] FileId 108 active, connecting socket @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1473ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.235Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1473ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1473ms] [LOG] [Permissions] Excalidraw API available, applying current read-only state: false @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1473ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1473ms] [LOG] [Permissions] Refreshing from JWT with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1473ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.236Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1473ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1473ms] [LOG] [Permissions] Initial setup with fileId: 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1473ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.236Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1474ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1511ms] [LOG] [Sync] Executing final sync on page leave @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1511ms] [LOG] [Sync] Using cached state with 0 elements @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1568ms] [LOG] [Sync] Final sync done, status: 200 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1576ms] [LOG] [Sync] SYNCER STATUS: NOT SYNCER @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1590ms] [LOG] [Collaboration] Creating new socket instance @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1591ms] [LOG] [Permissions] JWT indicates write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1591ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1591ms] [LOG] [Permissions] JWT indicates write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1591ms] [LOG] [Permissions] User has write access {forcedByPreview: false} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1655ms] [LOG] [Recording] Socket reconnected, checking availability @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1656ms] [LOG] [Collaboration] Received init-room event from server, initiating room join @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1656ms] [LOG] [Collaboration] Force reset room join tracking (was: null) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1656ms] [LOG] [Collaboration] Fallback: Setting status to online based on init-room + socket.connected (was: connecting) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1656ms] [LOG] [Collaboration] Joining room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1657ms] [LOG] [Collaboration] Debounced join room 108 @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1659ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.422Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1660ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1663ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1664ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1664ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1664ms] [LOG] [Recording] Availability check result: {available: false, reason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server.} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1664ms] [LOG] [Recording] State update: {isAvailable: false, unavailableReason: Chromium failed to start (An `executablePath` or `…ependencies and restart the collaboration server., showUnavailableInfo: true} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1664ms] [LOG] [Collaboration] Sync designation received: true @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1666ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.429Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1666ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1667ms] [LOG] [Sync] SYNCER STATUS: DESIGNATED AS SYNCER @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1670ms] [LOG] [Collaboration] Room user change: 2 users @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1670ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 381 seconds (at 2026-05-18T19:47:12.433Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1670ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    1673ms] [LOG] [Collaboration] Updated collaborators: 1 users online (filtered out current user) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1673ms] [LOG] [Collaboration] User joined: admin (admin) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1674ms] [LOG] [Collaboration] Broadcasting images to new user: admin @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    1674ms] [LOG] [Recording] New state: {isRecording: false, error: null, startTime: null, status: idle, duration: null} @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:1011
+[    1870ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[    2280ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 380 seconds (at 2026-05-18T19:47:12.043Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    2281ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[    9814ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   11666ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 371 seconds (at 2026-05-18T19:47:12.429Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   11667ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12461ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 370 seconds (at 2026-05-18T19:47:12.223Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12461ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12467ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   12517ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 370 seconds (at 2026-05-18T19:47:12.279Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   12517ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   13014ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   14704ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 368 seconds (at 2026-05-18T19:47:12.466Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14704ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   14711ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   15210ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   19767ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   21667ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 361 seconds (at 2026-05-18T19:47:12.430Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   21668ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   29769ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   30283ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   31670ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 351 seconds (at 2026-05-18T19:47:12.432Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   31670ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   31672ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 351 seconds (at 2026-05-18T19:47:12.434Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   31672ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   39772ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   40270ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   41672ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 341 seconds (at 2026-05-18T19:47:12.434Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   41672ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   41674ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 341 seconds (at 2026-05-18T19:47:12.436Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   41674ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   49775ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   50273ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   51677ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 331 seconds (at 2026-05-18T19:47:12.439Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51677ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51679ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 331 seconds (at 2026-05-18T19:47:12.441Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   51679ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   59775ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   60274ms] [WARNING] [Collaboration] Received identical SceneInit payload, skipping update @ http://127.0.0.1:8088/apps-shared/whiteboard/js/NcSelect-f-Aomes4.chunk.mjs:23
+[   61679ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 321 seconds (at 2026-05-18T19:47:12.441Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   61679ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   61681ms] [LOG] [JWTStore] Setting up auto-refresh for room 108 in 321 seconds (at 2026-05-18T19:47:12.443Z) @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1
+[   61681ms] [LOG] [JWTStore] Setting permissions from valid token: write access @ http://127.0.0.1:8088/apps-shared/whiteboard/js/useJwtStore-C5acJuD8.chunk.mjs:1

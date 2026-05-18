@@ -1,0 +1,312 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]: Keyboard navigation help
+    - generic [ref=e6]:
+      - button "Skip to app navigation" [ref=e7] [cursor=pointer]:
+        - generic [ref=e9]: Skip to app navigation
+      - button "Skip to main content" [ref=e10] [cursor=pointer]:
+        - generic [ref=e12]: Skip to main content
+    - img [ref=e13]:
+      - img [ref=e15]
+  - generic [ref=e65]:
+    - generic [ref=e66]:
+      - navigation "Files" [ref=e67]:
+        - generic [ref=e69]:
+          - generic [ref=e71]:
+            - searchbox "Search here …" [ref=e72] [cursor=pointer]
+            - button "Clear search" [ref=e73] [cursor=pointer]:
+              - img [ref=e76]:
+                - img [ref=e77]
+          - button "Search scope options" [ref=e82] [cursor=pointer]:
+            - img [ref=e85]:
+              - img [ref=e86]
+        - list "Views" [ref=e89]:
+          - listitem [ref=e90]:
+            - link "All files" [ref=e92] [cursor=pointer]:
+              - /url: /index.php/apps/files/files
+              - img [ref=e94]:
+                - img [ref=e96]
+              - generic [ref=e98]: All files
+          - listitem [ref=e99]:
+            - link "Personal files" [ref=e101] [cursor=pointer]:
+              - /url: /index.php/apps/files/personal
+              - img [ref=e103]:
+                - img [ref=e105]
+              - generic [ref=e107]: Personal files
+          - listitem [ref=e108]:
+            - link "Recent" [ref=e110] [cursor=pointer]:
+              - /url: /index.php/apps/files/recent
+              - img [ref=e112]:
+                - img [ref=e114]
+              - generic [ref=e116]: Recent
+          - listitem [ref=e117]:
+            - link "Favorites" [ref=e119] [cursor=pointer]:
+              - /url: /index.php/apps/files/favorites
+              - img [ref=e121]:
+                - img [ref=e123]
+              - generic [ref=e125]: Favorites
+          - listitem [ref=e126]:
+            - generic [ref=e127]:
+              - link "Shares" [ref=e128] [cursor=pointer]:
+                - /url: /index.php/apps/files/shareoverview
+                - img [ref=e130]:
+                  - img [ref=e132]
+                - generic [ref=e134]: Shares
+              - button "Open menu" [ref=e135] [cursor=pointer]:
+                - img [ref=e138]:
+                  - img [ref=e139]
+          - listitem [ref=e141]:
+            - link "Tags" [ref=e143] [cursor=pointer]:
+              - /url: /index.php/apps/files/tags
+              - img [ref=e145]:
+                - img [ref=e147]
+              - generic [ref=e149]: Tags
+          - listitem [ref=e150]:
+            - generic [ref=e151]:
+              - link "Folder tree" [ref=e152] [cursor=pointer]:
+                - /url: /index.php/apps/files/folders
+                - img [ref=e154]:
+                  - img [ref=e156]
+                - generic [ref=e158]: Folder tree
+              - button "Open menu" [ref=e159] [cursor=pointer]:
+                - img [ref=e162]:
+                  - img [ref=e163]
+          - listitem [ref=e165]:
+            - link "Deleted files" [ref=e167] [cursor=pointer]:
+              - /url: /index.php/apps/files/trashbin
+              - img [ref=e169]:
+                - img [ref=e171]
+              - generic [ref=e173]: Deleted files
+        - list [ref=e174]:
+          - listitem [ref=e175]:
+            - link "19.6 MB used" [ref=e177] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e179]:
+                - img [ref=e180]
+              - generic [ref=e182]: 19.6 MB used
+          - listitem [ref=e183]:
+            - link "Files settings" [ref=e185] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e187]:
+                - img [ref=e188]
+              - generic [ref=e190]: Files settings
+      - button "Close navigation" [expanded] [ref=e192] [cursor=pointer]:
+        - img [ref=e195]:
+          - img [ref=e196]
+    - main [ref=e198]:
+      - heading "All files" [level=1] [ref=e199]
+      - generic [ref=e200]:
+        - generic [ref=e202]:
+          - button "New" [ref=e205] [cursor=pointer]:
+            - generic [ref=e206]:
+              - img [ref=e208]:
+                - img [ref=e209]
+              - generic [ref=e211]: New
+          - button "Choose File" [ref=e212] [cursor=pointer]
+        - navigation "Current directory path" [ref=e214]:
+          - list [ref=e215]:
+            - listitem [ref=e216]:
+              - generic "Go to the \"/\" directory" [ref=e471]:
+                - button "All files" [ref=e219] [cursor=pointer]:
+                  - generic [ref=e220]:
+                    - img [ref=e222]:
+                      - img [ref=e223]
+                    - generic [ref=e225]: All files
+        - button "Filters" [ref=e228] [cursor=pointer]:
+          - img [ref=e231]:
+            - img [ref=e232]
+        - button "Switch to grid view" [ref=e234] [cursor=pointer]:
+          - img [ref=e237]:
+            - img [ref=e238]
+      - generic [ref=e240]:
+        - list [ref=e244]:
+          - listitem [ref=e245]:
+            - generic "/New whiteboard.whiteboard" [ref=e246] [cursor=pointer]:
+              - generic [ref=e248]:
+                - generic [ref=e249]: New whiteboard.whiteboard
+                - generic [ref=e250]: Last updated 2 minutes ago
+                - generic [ref=e251]: Path name /New whiteboard.whiteboard
+        - table "List of your files and folders. Column headers with buttons are sortable. This list is not fully rendered for performance reasons. The files will be rendered as you navigate through the list." [ref=e252]:
+          - caption [ref=e253]: List of your files and folders. Column headers with buttons are sortable. This list is not fully rendered for performance reasons. The files will be rendered as you navigate through the list.
+          - rowgroup [ref=e254]:
+            - row "Toggle selection for all files and folders Name Size Modified" [ref=e255]:
+              - columnheader "Toggle selection for all files and folders" [ref=e256]:
+                - generic [ref=e257]:
+                  - checkbox "Toggle selection for all files and folders" [ref=e258] [cursor=pointer]
+                  - img [ref=e261] [cursor=pointer]:
+                    - img [ref=e262]
+              - columnheader "Name" [ref=e264] [cursor=pointer]:
+                - button "Name" [ref=e266]:
+                  - generic [ref=e267]:
+                    - img [ref=e269]:
+                      - img [ref=e270]
+                    - generic [ref=e272]: Name
+              - columnheader
+              - columnheader "Size" [ref=e273] [cursor=pointer]:
+                - button "Size" [ref=e274]:
+                  - generic [ref=e275]:
+                    - img [ref=e277]:
+                      - img [ref=e278]
+                    - generic [ref=e280]: Size
+              - columnheader "Modified" [ref=e281] [cursor=pointer]:
+                - button "Modified" [ref=e282]:
+                  - generic [ref=e283]:
+                    - img [ref=e285]:
+                      - img [ref=e286]
+                    - generic [ref=e288]: Modified
+          - rowgroup [ref=e289]:
+            - row "Toggle selection for folder \"Media\" Open folder Media Assigned collaborative tags Sharing options Actions 11.2 MB 2 weeks ago" [ref=e290]:
+              - cell "Toggle selection for folder \"Media\"" [ref=e291]:
+                - generic [ref=e292]:
+                  - checkbox "Toggle selection for folder \"Media\"" [ref=e293] [cursor=pointer]
+                  - img [ref=e296] [cursor=pointer]:
+                    - img [ref=e297]
+              - cell "Open folder Media" [ref=e299]:
+                - img [ref=e301] [cursor=pointer]:
+                  - img [ref=e302]
+                - button "Open folder Media" [ref=e304] [cursor=pointer]:
+                  - generic [ref=e306]: Media
+              - cell "Assigned collaborative tags Sharing options Actions" [ref=e307]:
+                - generic:
+                  - list "Assigned collaborative tags"
+                - generic [ref=e308]:
+                  - button "Sharing options" [ref=e309] [cursor=pointer]:
+                    - img [ref=e312]:
+                      - img [ref=e314]
+                  - button "Actions" [ref=e318] [cursor=pointer]:
+                    - img [ref=e321]:
+                      - img [ref=e322]
+              - cell "11.2 MB" [ref=e324]:
+                - generic [ref=e325]: 11.2 MB
+              - cell "2 weeks ago" [ref=e326]:
+                - generic "5/2/26, 5:39:16 PM" [ref=e327]: 2 weeks ago
+            - row "Toggle selection for folder \"Templates\" Open folder Templates Assigned collaborative tags Sharing options Actions 0 KB 2 weeks ago" [ref=e328]:
+              - cell "Toggle selection for folder \"Templates\"" [ref=e329]:
+                - generic [ref=e330]:
+                  - checkbox "Toggle selection for folder \"Templates\"" [ref=e331] [cursor=pointer]
+                  - img [ref=e334] [cursor=pointer]:
+                    - img [ref=e335]
+              - cell "Open folder Templates" [ref=e337]:
+                - img [ref=e339] [cursor=pointer]:
+                  - img [ref=e340]
+                - button "Open folder Templates" [ref=e342] [cursor=pointer]:
+                  - generic [ref=e344]: Templates
+              - cell "Assigned collaborative tags Sharing options Actions" [ref=e345]:
+                - generic:
+                  - list "Assigned collaborative tags"
+                - generic [ref=e346]:
+                  - button "Sharing options" [ref=e347] [cursor=pointer]:
+                    - img [ref=e350]:
+                      - img [ref=e352]
+                  - button "Actions" [ref=e356] [cursor=pointer]:
+                    - img [ref=e359]:
+                      - img [ref=e360]
+              - cell "0 KB" [ref=e362]:
+                - generic [ref=e363]: 0 KB
+              - cell "2 weeks ago" [ref=e364]:
+                - generic "5/2/26, 5:39:16 PM" [ref=e365]: 2 weeks ago
+            - row "Toggle selection for file \"New whiteboard.whiteboard\" View Assigned collaborative tags Sharing options Actions 0 KB 2 minutes ago" [ref=e472]:
+              - cell "Toggle selection for file \"New whiteboard.whiteboard\"" [ref=e367]:
+                - generic [ref=e368]:
+                  - checkbox "Toggle selection for file \"New whiteboard.whiteboard\"" [ref=e369] [cursor=pointer]
+                  - img [ref=e372] [cursor=pointer]:
+                    - img [ref=e373]
+              - cell "View" [ref=e375]:
+                - button "View" [ref=e378] [cursor=pointer]:
+                  - generic [ref=e379]:
+                    - generic [ref=e380]: New whiteboard
+                    - generic [ref=e381]: .whiteboard
+              - cell "Assigned collaborative tags Sharing options Actions" [ref=e382]:
+                - generic:
+                  - list "Assigned collaborative tags"
+                - generic [ref=e383]:
+                  - button "Sharing options" [ref=e384] [cursor=pointer]:
+                    - img [ref=e387]:
+                      - img [ref=e389]
+                  - button "Actions" [ref=e393] [cursor=pointer]:
+                    - img [ref=e396]:
+                      - img [ref=e397]
+              - cell "0 KB" [ref=e399]:
+                - generic [ref=e400]: 0 KB
+              - cell "2 minutes ago" [ref=e473]:
+                - generic "5/18/26, 7:50:27 PM" [ref=e402]: 2 minutes ago
+            - row "Toggle selection for file \"Nextcloud_Server_Administration_Manual.pdf\" View Assigned collaborative tags Sharing options Actions 8.4 MB 2 weeks ago" [ref=e403]:
+              - cell "Toggle selection for file \"Nextcloud_Server_Administration_Manual.pdf\"" [ref=e404]:
+                - generic [ref=e405]:
+                  - checkbox "Toggle selection for file \"Nextcloud_Server_Administration_Manual.pdf\"" [ref=e406] [cursor=pointer]
+                  - img [ref=e409] [cursor=pointer]:
+                    - img [ref=e410]
+              - cell "View" [ref=e412]:
+                - button "View" [ref=e415] [cursor=pointer]:
+                  - generic [ref=e416]:
+                    - generic [ref=e417]: Nextcloud_Server_Administration_Manual
+                    - generic [ref=e418]: .pdf
+              - cell "Assigned collaborative tags Sharing options Actions" [ref=e419]:
+                - generic:
+                  - list "Assigned collaborative tags"
+                - generic [ref=e420]:
+                  - button "Sharing options" [ref=e421] [cursor=pointer]:
+                    - img [ref=e424]:
+                      - img [ref=e426]
+                  - button "Actions" [ref=e430] [cursor=pointer]:
+                    - img [ref=e433]:
+                      - img [ref=e434]
+              - cell "8.4 MB" [ref=e436]:
+                - generic [ref=e437]: 8.4 MB
+              - cell "2 weeks ago" [ref=e438]:
+                - generic "5/2/26, 5:39:16 PM" [ref=e439]: 2 weeks ago
+          - rowgroup [ref=e440]:
+            - row "Total rows summary 2 files · 2 folders 19.6 MB" [ref=e441]:
+              - rowheader "Total rows summary" [ref=e442]:
+                - generic [ref=e443]: Total rows summary
+              - cell "2 files · 2 folders" [ref=e444]:
+                - generic [ref=e446]: 2 files · 2 folders
+              - cell
+              - cell "19.6 MB" [ref=e447]:
+                - generic [ref=e448]: 19.6 MB
+              - cell [ref=e449]
+  - dialog "New whiteboard.whiteboard" [active] [ref=e474]:
+    - generic [ref=e475]:
+      - heading "New whiteboard.whiteboard" [level=2] [ref=e476]
+      - generic [ref=e477]:
+        - button "Actions" [ref=e480] [cursor=pointer]:
+          - img [ref=e483]:
+            - img [ref=e484]
+        - button "Close" [ref=e486] [cursor=pointer]:
+          - img [ref=e489]:
+            - img [ref=e490]
+    - generic [ref=e499]:
+      - 'button "Connection: Offline. Click to expand." [ref=e528] [cursor=pointer]':
+        - img [ref=e502]
+      - generic [ref=e506]:
+        - generic:
+          - button [ref=e509] [cursor=pointer]:
+            - img [ref=e510]
+          - contentinfo:
+            - region "Canvas actions" [ref=e514]:
+              - heading "Canvas actions" [level=2] [ref=e515]
+              - generic [ref=e517]:
+                - button "Zoom out" [ref=e518] [cursor=pointer]:
+                  - img [ref=e520]
+                - button "Reset zoom" [ref=e522] [cursor=pointer]: 100%
+                - button "Zoom in" [ref=e523] [cursor=pointer]:
+                  - img [ref=e525]
+        - generic:
+          - img
+        - generic [ref=e527]: Drawing canvas
+  - navigation "Custom application sidebar" [ref=e450]:
+    - button "Toggle sidebar" [ref=e452] [cursor=pointer]:
+      - img [ref=e453]
+    - generic [ref=e455]:
+      - link "Dashboard" [ref=e457] [cursor=pointer]:
+        - /url: /index.php/apps/dashboard/
+        - img [ref=e459]
+        - generic [ref=e460]: Dashboard
+      - link "Files" [ref=e462] [cursor=pointer]:
+        - /url: /index.php/apps/files/
+        - img [ref=e464]
+        - generic [ref=e465]: Files
+    - link "More apps" [ref=e467] [cursor=pointer]:
+      - /url: /index.php/settings/apps
+      - img [ref=e469]
+      - generic [ref=e470]: More apps

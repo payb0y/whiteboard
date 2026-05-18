@@ -10,7 +10,7 @@ import { getCurrentUser } from '@nextcloud/auth'
 import { getDialogBuilder, DialogSeverity } from '@nextcloud/dialogs'
 import { translate as t } from '@nextcloud/l10n'
 import { loadState } from '@nextcloud/initial-state'
-import { Excalidraw as ExcalidrawComponent, useHandleLibrary, Sidebar, isElementLink } from '@nextcloud/excalidraw'
+import { Excalidraw as ExcalidrawComponent, useHandleLibrary, Sidebar, isElementLink, newElementWith, CaptureUpdateAction } from '@nextcloud/excalidraw'
 import '@excalidraw/excalidraw/index.css'
 import type { LibraryItems } from '@nextcloud/excalidraw/dist/types/excalidraw/types'
 import { useExcalidrawStore } from './stores/useExcalidrawStore'
@@ -231,7 +231,12 @@ export default function App({
 						if (!api) {
 							return
 						}
-						api.updateScene({ elements: [] })
+						const elements = api.getSceneElementsIncludingDeleted()
+						const deletedElements = elements.map(el => newElementWith(el, { isDeleted: true }))
+						api.updateScene({
+							elements: deletedElements,
+							captureUpdate: CaptureUpdateAction.IMMEDIATELY,
+						})
 					},
 				},
 			])
@@ -515,6 +520,9 @@ export default function App({
 	}
 
 	const beforeElementCreated = (el: ExcalidrawElement) => {
+		if (el.customData?.creator) {
+			return el
+		}
 		const user = getCurrentUser()
 		if (!user) {
 			return el
@@ -553,7 +561,7 @@ export default function App({
 				<Excalidraw
 					validateEmbeddable={() => true}
 					renderEmbeddable={Embeddable}
-					beforeElementCreated={beforeElementCreated}
+					onElementsCreated={(newElements) => newElements.map(beforeElementCreated)}
 					excalidrawAPI={setExcalidrawAPI}
 					initialData={initialDataPromise}
 					generateIdForFile={generateIdForFile}

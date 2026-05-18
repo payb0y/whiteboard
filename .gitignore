@@ -1,11 +1,7 @@
 
 \.idea/
 
-/build/
 /backup/
-/js/
-/dist/
-/css/
 /vendor/
 /node_modules/
 /recordings/

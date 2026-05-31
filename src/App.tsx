@@ -7,10 +7,10 @@
 
 import { memo, useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react'
 import { getCurrentUser } from '@nextcloud/auth'
-import { getDialogBuilder, DialogSeverity } from '@nextcloud/dialogs'
+import { getDialogBuilder, DialogSeverity, showError } from '@nextcloud/dialogs'
 import { translate as t } from '@nextcloud/l10n'
 import { loadState } from '@nextcloud/initial-state'
-import { Excalidraw as ExcalidrawComponent, useHandleLibrary, Sidebar, isElementLink, newElementWith, CaptureUpdateAction } from '@nextcloud/excalidraw'
+import { Excalidraw as ExcalidrawComponent, useHandleLibrary, Sidebar, isElementLink, newElementWith, CaptureUpdateAction, restoreElements, restoreAppState } from '@nextcloud/excalidraw'
 import '@excalidraw/excalidraw/index.css'
 import type { LibraryItems } from '@nextcloud/excalidraw/dist/types/excalidraw/types'
 import { useExcalidrawStore } from './stores/useExcalidrawStore'
@@ -218,30 +218,56 @@ export default function App({
 			return
 		}
 
-		const triggerLoadShortcut = () => {
-			const excalidrawContainer = document.querySelector('.excalidraw') as HTMLElement | null
-			if (!excalidrawContainer) {
-				return
-			}
-			const isMacPlatform = typeof navigator !== 'undefined'
-				&& (navigator.userAgentData?.platform === 'macOS' || /Mac|iPhone|iPad/.test(navigator.platform ?? ''))
-			const eventConfig: KeyboardEventInit = {
-				key: 'o',
-				code: 'KeyO',
-				bubbles: true,
-				cancelable: true,
-			}
-			if (isMacPlatform) {
-				eventConfig.metaKey = true
-			} else {
-				eventConfig.ctrlKey = true
-			}
-			excalidrawContainer.dispatchEvent(new KeyboardEvent('keydown', eventConfig))
+		const pickAndImport = () => {
+			const input = document.createElement('input')
+			input.type = 'file'
+			input.accept = '.whiteboard,.excalidraw,application/json'
+			input.style.display = 'none'
+
+			input.addEventListener('change', async () => {
+				const file = input.files?.[0]
+				input.remove()
+				if (!file) {
+					return
+				}
+				try {
+					const text = await file.text()
+					const data = JSON.parse(text)
+					if (!data || !Array.isArray(data.elements)) {
+						throw new Error('File does not contain an elements array')
+					}
+
+					const restored = restoreElements(data.elements, null)
+					const appStatePatch = restoreAppState(data.appState ?? null, null)
+					const incomingFiles = (data.files && typeof data.files === 'object') ? data.files : {}
+
+					excalidrawAPI.updateScene({
+						elements: restored,
+						appState: appStatePatch,
+						captureUpdate: CaptureUpdateAction.IMMEDIATELY,
+					})
+
+					const filesArray = Object.values(incomingFiles).filter(
+						(f): f is { id: string; dataURL: string; mimeType: string; created: number } =>
+							!!f && typeof f === 'object' && 'dataURL' in (f as Record<string, unknown>),
+					)
+					if (filesArray.length > 0) {
+						// eslint-disable-next-line @typescript-eslint/no-explicit-any
+						excalidrawAPI.addFiles(filesArray as any)
+					}
+				} catch (err) {
+					logger.error('[App] Import whiteboard failed', { error: err })
+					showError(t('whiteboard', 'Could not import whiteboard: invalid file'))
+				}
+			}, { once: true })
+
+			document.body.appendChild(input)
+			input.click()
 		}
 
 		const hasElements = excalidrawAPI.getSceneElements().length > 0
 		if (!hasElements) {
-			triggerLoadShortcut()
+			pickAndImport()
 			return
 		}
 
@@ -253,7 +279,7 @@ export default function App({
 				{
 					label: t('whiteboard', 'Import'),
 					type: 'primary',
-					callback: triggerLoadShortcut,
+					callback: pickAndImport,
 				},
 			])
 			.build()
@@ -546,7 +572,7 @@ export default function App({
 		}
 
 		return {
-			loadScene: true,
+			loadScene: false,
 		}
 	}, [isVersionPreview])
 

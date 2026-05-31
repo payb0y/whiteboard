@@ -190,8 +190,7 @@ export const ExcalidrawMenu = memo(function ExcalidrawMenu({ fileNameWithoutExte
 			{onImportWhiteboard && (
 				<MainMenu.Item
 					icon={<Icon path={mdiFileImport} size={0.75} />}
-					onSelect={onImportWhiteboard}
-					shortcut={isMacPlatform ? '⌘+O' : 'Ctrl+O'}>
+					onSelect={onImportWhiteboard}>
 					{t('whiteboard', 'Import whiteboard…')}
 				</MainMenu.Item>
 			)}

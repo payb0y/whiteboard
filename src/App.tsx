@@ -213,6 +213,56 @@ export default function App({
 		}
 	}, [isTimerVisible, isTimerActive])
 
+	const handleImportWhiteboard = useCallback(() => {
+		if (!excalidrawAPI || isReadOnly) {
+			return
+		}
+
+		const triggerLoadShortcut = () => {
+			const excalidrawContainer = document.querySelector('.excalidraw') as HTMLElement | null
+			if (!excalidrawContainer) {
+				return
+			}
+			const isMacPlatform = typeof navigator !== 'undefined'
+				&& (navigator.userAgentData?.platform === 'macOS' || /Mac|iPhone|iPad/.test(navigator.platform ?? ''))
+			const eventConfig: KeyboardEventInit = {
+				key: 'o',
+				code: 'KeyO',
+				bubbles: true,
+				cancelable: true,
+			}
+			if (isMacPlatform) {
+				eventConfig.metaKey = true
+			} else {
+				eventConfig.ctrlKey = true
+			}
+			excalidrawContainer.dispatchEvent(new KeyboardEvent('keydown', eventConfig))
+		}
+
+		const hasElements = excalidrawAPI.getSceneElements().length > 0
+		if (!hasElements) {
+			triggerLoadShortcut()
+			return
+		}
+
+		const dialog = getDialogBuilder(t('whiteboard', 'Import whiteboard'))
+			.setText(t('whiteboard', 'Importing a whiteboard will replace the current canvas contents. This action cannot be undone.'))
+			.setSeverity(DialogSeverity.Warning)
+			.setButtons([
+				{ label: t('whiteboard', 'Cancel'), type: 'tertiary' },
+				{
+					label: t('whiteboard', 'Import'),
+					type: 'primary',
+					callback: triggerLoadShortcut,
+				},
+			])
+			.build()
+
+		dialog.show().catch((error) => {
+			logger.error('[App] Import whiteboard dialog failed', { error })
+		})
+	}, [excalidrawAPI, isReadOnly])
+
 	const handleResetCanvas = useCallback(() => {
 		if (!excalidrawAPI || isReadOnly) {
 			return
@@ -496,7 +546,7 @@ export default function App({
 		}
 
 		return {
-			loadScene: false,
+			loadScene: true,
 		}
 	}, [isVersionPreview])
 
@@ -626,6 +676,7 @@ export default function App({
 							gridModeEnabled={gridModeEnabled}
 							onToggleGrid={() => setGridModeEnabled(!gridModeEnabled)}
 							onResetCanvas={isReadOnly ? undefined : handleResetCanvas}
+							onImportWhiteboard={isReadOnly ? undefined : handleImportWhiteboard}
 						/>
 					)}
 				</Excalidraw>

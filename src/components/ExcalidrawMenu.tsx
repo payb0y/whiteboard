@@ -6,7 +6,7 @@
 import { useCallback, useEffect, useRef, memo } from 'react'
 import type { KeyboardEvent as ReactKeyboardEvent } from 'react'
 import { Icon } from '@mdi/react'
-import { mdiMonitorScreenshot, mdiImageMultiple, mdiTimerOutline, mdiVote, mdiGrid, mdiMagnify, mdiBroom } from '@mdi/js'
+import { mdiMonitorScreenshot, mdiImageMultiple, mdiTimerOutline, mdiVote, mdiGrid, mdiMagnify, mdiBroom, mdiFileImport } from '@mdi/js'
 import { MainMenu, CaptureUpdateAction } from '@nextcloud/excalidraw'
 import { RecordingMenuItem } from './Recording'
 import { PresentationMenuItem } from './Presentation'
@@ -27,9 +27,10 @@ interface ExcalidrawMenuProps {
 	gridModeEnabled: boolean
 	onToggleGrid: () => void
 	onResetCanvas?: () => void
+	onImportWhiteboard?: () => void
 }
 
-export const ExcalidrawMenu = memo(function ExcalidrawMenu({ fileNameWithoutExtension, recordingState, presentationState, isTimerVisible, onToggleTimer, gridModeEnabled, onToggleGrid, onResetCanvas }: ExcalidrawMenuProps) {
+export const ExcalidrawMenu = memo(function ExcalidrawMenu({ fileNameWithoutExtension, recordingState, presentationState, isTimerVisible, onToggleTimer, gridModeEnabled, onToggleGrid, onResetCanvas, onImportWhiteboard }: ExcalidrawMenuProps) {
 	const isMacPlatform = typeof navigator !== 'undefined' && (navigator.userAgentData?.platform === 'macOS' || /Mac|iPhone|iPad/.test(navigator.platform ?? ''))
 	const { excalidrawAPI } = useExcalidrawStore(useShallow(state => ({
 		excalidrawAPI: state.excalidrawAPI,
@@ -186,6 +187,14 @@ export const ExcalidrawMenu = memo(function ExcalidrawMenu({ fileNameWithoutExte
 				shortcut={isMacPlatform ? '⌘+⇧+E' : 'Ctrl+Shift+E'}>
 				{t('whiteboard', 'Export image…')}
 			</MainMenu.Item>
+			{onImportWhiteboard && (
+				<MainMenu.Item
+					icon={<Icon path={mdiFileImport} size={0.75} />}
+					onSelect={onImportWhiteboard}
+					shortcut={isMacPlatform ? '⌘+O' : 'Ctrl+O'}>
+					{t('whiteboard', 'Import whiteboard…')}
+				</MainMenu.Item>
+			)}
 			<MainMenu.Item
 				icon={<Icon path={mdiMonitorScreenshot} size={0.75} />}
 				onSelect={takeScreenshot}

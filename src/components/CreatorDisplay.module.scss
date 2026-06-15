@@ -16,8 +16,9 @@
 .label {
 	position: absolute;
 	display: inline-flex;
-	align-items: center;
-	padding: 2px 8px;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 3px 8px;
 	background: rgba(25, 118, 210, 0.8);
 	color: rgba(255, 255, 255, 0.95);
 	border-radius: 12px;
@@ -59,8 +60,20 @@
 }
 
 .name {
-	display: inline-block;
+	display: block;
 	max-width: 150px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	line-height: 1.2;
+}
+
+.time {
+	display: block;
+	max-width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 1.1;
+	opacity: 0.85;
 }

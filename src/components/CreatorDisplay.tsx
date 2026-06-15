@@ -8,6 +8,7 @@ import type { ExcalidrawImperativeAPI } from '@nextcloud/excalidraw/dist/types/e
 import type { CreatorDisplaySettings, WhiteboardElement } from '../types/whiteboard'
 import styles from './CreatorDisplay.module.scss'
 import { sceneCoordsToViewportCoords } from '@nextcloud/excalidraw'
+import { getRelativeTime } from '../utils/time'
 
 interface CreatorDisplayProps {
 	excalidrawAPI: ExcalidrawImperativeAPI | null
@@ -17,6 +18,7 @@ interface CreatorDisplayProps {
 interface CreatorLabel {
 	elementId: string
 	creatorName: string
+	timeText: string
 	x: number
 	y: number
 	isSelected: boolean
@@ -71,9 +73,16 @@ export const CreatorDisplay = ({ excalidrawAPI, settings }: CreatorDisplayProps)
 			if (shouldDisplay) {
 				const bounds = getElementBounds(element)
 				if (bounds) {
+					// Smart "last activity" time: prefer the last-modified timestamp,
+					// but never show a value older than creation time.
+					const creator = element.customData.creator
+					const lastModified = element.customData.lastModifiedBy
+					const activityTs = Math.max(creator.createdAt, lastModified?.createdAt ?? 0)
+
 					labels.push({
 						elementId: element.id,
-						creatorName: element.customData.creator.displayName,
+						creatorName: creator.displayName,
+						timeText: getRelativeTime(activityTs),
 						x: bounds.x,
 						y: bounds.y,
 						isSelected: !!selectedElementIds[element.id],
@@ -164,6 +173,14 @@ export const CreatorDisplay = ({ excalidrawAPI, settings }: CreatorDisplayProps)
 		}
 	}, [settings.displayMode, handleMouseMove])
 
+	// Refresh relative timestamps periodically so they stay current while the
+	// board is idle (onChange only fires on user/canvas activity).
+	useEffect(() => {
+		if (!settings.enabled) return
+		const interval = setInterval(updateCreatorLabels, 60_000)
+		return () => clearInterval(interval)
+	}, [settings.enabled, updateCreatorLabels])
+
 	// Memoize label style
 	const labelStyle = useMemo(() => ({
 		opacity: settings.opacity,
@@ -187,6 +204,7 @@ export const CreatorDisplay = ({ excalidrawAPI, settings }: CreatorDisplayProps)
 					data-selected={label.isSelected}
 				>
 					<span className={styles.name}>{label.creatorName}</span>
+					<span className={styles.time}>{label.timeText}</span>
 				</div>
 			))}
 		</div>

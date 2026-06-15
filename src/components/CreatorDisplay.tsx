@@ -48,7 +48,10 @@ export const CreatorDisplay = ({ excalidrawAPI, settings }: CreatorDisplayProps)
 
 		const { x, y } = sceneCoordsToViewportCoords({ sceneX, sceneY }, appState)
 
-		return { x, y: y - 73 }
+		// Offset the label above the element. The label is top-anchored and grows
+		// downward, so this clears the two-line (name + timestamp) pill height and
+		// keeps the pointer arrow on the element's top edge rather than inside it.
+		return { x, y: y - 84 }
 	}, [excalidrawAPI])
 
 	// Update creator labels based on current scene

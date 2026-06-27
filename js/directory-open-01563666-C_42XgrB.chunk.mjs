@@ -1,0 +1,3 @@
+/*! third party licenses: js/vendor.LICENSE.txt */
+var o=async(e=[{}])=>(Array.isArray(e)||(e=[e]),e[0].recursive=e[0].recursive||!1,new Promise((s,n)=>{const r=document.createElement("input");r.type="file",r.webkitdirectory=!0;const c=t=>{typeof i=="function"&&i(),s(t)},i=e[0].legacySetup&&e[0].legacySetup(c,()=>i(n),r);r.addEventListener("change",()=>{let t=Array.from(r.files);e[0].recursive?e[0].recursive&&e[0].skipDirectory&&(t=t.filter(a=>a.webkitRelativePath.split("/").every(l=>!e[0].skipDirectory({name:l,kind:"directory"})))):t=t.filter(a=>a.webkitRelativePath.split("/").length===2),c(t)}),r.click()}));export{o as default};
+//# sourceMappingURL=directory-open-01563666-C_42XgrB.chunk.mjs.map

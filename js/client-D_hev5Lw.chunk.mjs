@@ -1,0 +1,3 @@
+/*! third party licenses: js/vendor.LICENSE.txt */
+import{a as s}from"./vendor-BCFzZIhH.chunk.mjs";function f(e,i){for(var a=0;a<i.length;a++){const t=i[a];if(typeof t!="string"&&!Array.isArray(t)){for(const r in t)if(r!=="default"&&!(r in e)){const n=Object.getOwnPropertyDescriptor(t,r);n&&Object.defineProperty(e,r,n.get?n:{enumerable:!0,get:()=>t[r]})}}}return Object.freeze(Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}))}var o={},c;function p(){if(c)return o;c=1;var e=s();return o.createRoot=e.createRoot,o.hydrateRoot=e.hydrateRoot,o}var u=p();const d=f({__proto__:null},[u]);export{u as a,d as c};
+//# sourceMappingURL=client-D_hev5Lw.chunk.mjs.map

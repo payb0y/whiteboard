@@ -1,0 +1,3 @@
+/*! third party licenses: js/vendor.LICENSE.txt */
+const p=async e=>{const a=await e.getFile();return a.handle=e,a};var l=async(e=[{}])=>{Array.isArray(e)||(e=[e]);const a=[];e.forEach((i,s)=>{a[s]={description:i.description||"",accept:{}},i.mimeTypes?i.mimeTypes.map(n=>{a[s].accept[n]=i.extensions||[]}):a[s].accept["*/*"]=i.extensions||[]});const c=await window.showOpenFilePicker({id:e[0].id,startIn:e[0].startIn,types:a,multiple:e[0].multiple||!1,excludeAcceptAllOption:e[0].excludeAcceptAllOption||!1}),t=await Promise.all(c.map(p));return e[0].multiple?t:t[0]};export{l as default};
+//# sourceMappingURL=file-open-002ab408-DbSuOmQ2.chunk.mjs.map

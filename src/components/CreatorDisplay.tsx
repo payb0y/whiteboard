@@ -68,6 +68,11 @@ export const CreatorDisplay = ({ excalidrawAPI, settings }: CreatorDisplayProps)
 		elements.forEach(element => {
 			if (!element.customData?.creator) return
 
+			// Skip bound text elements (e.g. the text inside a text bubble or a
+			// labeled shape): the container already shows a single creator badge,
+			// so without this the container and its bound text would stack two.
+			if ((element as { containerId?: string | null }).containerId) return
+
 			const shouldDisplay
 				= settings.displayMode === 'always'
 				|| (settings.displayMode === 'selection' && selectedElementIds[element.id])

@@ -365,7 +365,7 @@
 "@excalidraw/excalidraw@file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz":
   version "0.18.0"
   resolved "file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz"
-  integrity "sha1-15wdUlsFZ7Kk21MpLReniqrUBE0= sha512-RUyDA1KUH+edapa2nEmBj0XPCYIC5mYQSMijaDkKJvjkVAt+73gm5I0DGjAbB9JLGhDtePfOKSlvEvUCwXxn3A=="
+  integrity "sha1-lojObLEu1L6ZWeJlOg8cM1a/O8s= sha512-D6TSZCfrIco2kCcLDyUmu7OQRAkblz1YSeg8UDblyrOTD30p/v2GClGJoF/V4IA3E9E64e/dmwN/U1eB1veRFg=="
   dependencies:
     "@braintree/sanitize-url" "6.0.2"
     "@excalidraw/laser-pointer" "1.3.1"
@@ -784,7 +784,7 @@
 "@nextcloud/excalidraw@file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz":
   version "0.18.0"
   resolved "file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz"
-  integrity "sha1-15wdUlsFZ7Kk21MpLReniqrUBE0= sha512-RUyDA1KUH+edapa2nEmBj0XPCYIC5mYQSMijaDkKJvjkVAt+73gm5I0DGjAbB9JLGhDtePfOKSlvEvUCwXxn3A=="
+  integrity "sha1-lojObLEu1L6ZWeJlOg8cM1a/O8s= sha512-D6TSZCfrIco2kCcLDyUmu7OQRAkblz1YSeg8UDblyrOTD30p/v2GClGJoF/V4IA3E9E64e/dmwN/U1eB1veRFg=="
   dependencies:
     "@braintree/sanitize-url" "6.0.2"
     "@excalidraw/laser-pointer" "1.3.1"

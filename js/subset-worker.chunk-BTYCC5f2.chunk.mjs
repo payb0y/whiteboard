@@ -1,0 +1,3 @@
+/*! third party licenses: js/vendor.LICENSE.txt */
+import{Commands as o,subsetToBinary as r}from"./subset-shared.chunk-ef9o9icV.chunk.mjs";import"./en-VV73LM57-B2t8486I.chunk.mjs";import"./index-DTTRrbCb.chunk.mjs";import"./whiteboard-main.mjs";import"./index-Ci-Hw-W_.chunk.mjs";import"./vendor-BCFzZIhH.chunk.mjs";var d=import.meta.url?new URL(import.meta.url):void 0;typeof window>"u"&&typeof self<"u"&&(self.onmessage=async a=>{switch(a.data.command){case o.Subset:let t=await r(a.data.arrayBuffer,a.data.codePoints);self.postMessage(t,{transfer:[t]});break}});export{d as WorkerUrl};
+//# sourceMappingURL=subset-worker.chunk-BTYCC5f2.chunk.mjs.map

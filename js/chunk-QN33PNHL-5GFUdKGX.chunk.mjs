@@ -1,3 +1,0 @@
-/*! third party licenses: js/vendor.LICENSE.txt */
-import{a,n as w,U as x}from"./NcSelect-DSCEY8Nj.chunk.mjs";var V=a((e,t,i,r)=>{e.attr("class",i);const{width:o,height:n,x:h,y:c}=u(e,t);w(e,n,o,r);const s=d(h,c,o,n,t);e.attr("viewBox",s),x.debug(`viewBox configured: ${s} with padding: ${t}`)},"setupViewPortForSVG"),u=a((e,t)=>{const i=e.node()?.getBBox()||{width:0,height:0,x:0,y:0};return{width:i.width+t*2,height:i.height+t*2,x:i.x,y:i.y}},"calculateDimensionsWithPadding"),d=a((e,t,i,r,o)=>`${e-o} ${t-o} ${i} ${r}`,"createViewBox");export{V as s};
-//# sourceMappingURL=chunk-QN33PNHL-5GFUdKGX.chunk.mjs.map

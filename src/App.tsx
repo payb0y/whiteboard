@@ -90,6 +90,8 @@ export default function App({
 		}
 		return rawValue
 	}, [])
+	// empty -> the URL built into the Excalidraw bundle
+	const pdfApiUrl = useMemo(() => loadState('whiteboard', 'pdfApiUrl', '') || undefined, [])
 	const maxImageSizeBytes = useMemo(() => (
 		maxImageSizeMb ? maxImageSizeMb * 1024 * 1024 : null
 	), [maxImageSizeMb])
@@ -641,6 +643,7 @@ export default function App({
 					excalidrawAPI={setExcalidrawAPI}
 					initialData={initialDataPromise}
 					generateIdForFile={generateIdForFile}
+					pdfApiUrl={pdfApiUrl}
 					onPointerUpdate={onPointerUpdate}
 					onChange={handleOnChange}
 					viewModeEnabled={isReadOnly}

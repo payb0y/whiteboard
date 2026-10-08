@@ -48,6 +48,10 @@ class LoadViewerListener implements IEventListener {
 			'disableExternalLibraries',
 			$this->configService->getDisableExternalLibraries()
 		);
+		$this->initialState->provideInitialState(
+			'pdfApiUrl',
+			$this->configService->getPdfApiUrl()
+		);
 		$user = $this->userSession->getUser();
 		$this->initialState->provideInitialState(
 			'autoUploadOnDisconnect',

@@ -63,6 +63,18 @@ final class ConfigService {
 		$this->appConfig->setAppValueString('collabBackendUrl', $collabBackendUrl);
 	}
 
+	/**
+	 * PDF-to-image service the editor posts imported PDFs to. Empty means the
+	 * URL built into the frontend bundle.
+	 */
+	public function getPdfApiUrl(): string {
+		if (!method_exists($this->appConfig, 'getAppValueString')) {
+			return $this->trimUrl($this->appConfig->getAppValue('pdf_api_url'));
+		}
+
+		return $this->trimUrl($this->appConfig->getAppValueString('pdf_api_url'));
+	}
+
 	private function trimUrl(string $url): string {
 		return rtrim(trim($url), '/');
 	}

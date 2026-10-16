@@ -52,6 +52,10 @@ class LoadViewerListener implements IEventListener {
 			'pdfApiUrl',
 			$this->configService->getPdfApiUrl()
 		);
+		$this->initialState->provideInitialState(
+			'vrijTraceEnabled',
+			$this->configService->getVrijTraceEnabled()
+		);
 		$user = $this->userSession->getUser();
 		$this->initialState->provideInitialState(
 			'autoUploadOnDisconnect',

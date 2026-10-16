@@ -36,7 +36,13 @@ enum BroadcastType {
 	ImageAdd = 'IMAGE_ADD', // Incoming image data from others
 	ImageRequest = 'IMAGE_REQUEST', // Request for image data
 	ViewportUpdate = 'VIEWPORT_UPDATE', // Incoming viewport changes from others
+	VrijTraceEditing = 'VRIJTRACE_EDITING', // Vrij Tracé parts a colleague is editing
 }
+
+/** a colleague's Vrij Tracé hold lapses unless re-announced (every 3 s) */
+const VRIJTRACE_HOLD_TTL = 8000
+
+type RemoteHolds = Record<string, { userId: string, name: string, expiresAt: number }>
 
 const CURSOR_UPDATE_DELAY = 50
 
@@ -56,6 +62,28 @@ export function useCollaboration() {
 			excalidrawAPI: state.excalidrawAPI,
 		})),
 	)
+
+	// Vrij Tracé holds of colleagues, by element id
+	const remoteHoldsRef = useRef<RemoteHolds>({})
+	const publishHolds = useCallback(() => {
+		const now = Date.now()
+		remoteHoldsRef.current = Object.fromEntries(
+			Object.entries(remoteHoldsRef.current).filter(([, hold]) => hold.expiresAt > now),
+		)
+		excalidrawAPI?.updateScene({
+			// app state key added by the Vrij Tracé fork build
+			appState: { vrijTraceRemoteHolds: { ...remoteHoldsRef.current } } as never,
+		})
+	}, [excalidrawAPI])
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			if (Object.keys(remoteHoldsRef.current).length) {
+				publishHolds()
+			}
+		}, 2000)
+		return () => clearInterval(timer)
+	}, [publishHolds])
 
 	const { getJWT, clearTokens } = useJWTStore(
 		useShallow(state => ({
@@ -293,8 +321,17 @@ export function useCollaboration() {
 
 			excalidrawAPI!.updateScene({ collaborators: newCollaborators })
 			console.log(`[Collaboration] Updated collaborators: ${newCollaborators.size} users online (filtered out current user)`)
+
+			// holds of colleagues who left lapse at once
+			const before = Object.keys(remoteHoldsRef.current).length
+			remoteHoldsRef.current = Object.fromEntries(
+				Object.entries(remoteHoldsRef.current).filter(([, hold]) => newCollaborators.has(hold.userId)),
+			)
+			if (Object.keys(remoteHoldsRef.current).length !== before) {
+				publishHolds()
+			}
 		},
-		[excalidrawAPI, getJWT],
+		[excalidrawAPI, getJWT, publishHolds],
 	)
 
 	// Function to update cursor state (unthrottled version)
@@ -646,6 +683,24 @@ export function useCollaboration() {
 						console.warn('[Collaboration] Invalid ViewportUpdate payload:', decoded.payload)
 					}
 					break
+				case BroadcastType.VrijTraceEditing: {
+					// shared data: accept only the expected shape, bounded
+					const { elementIds, userId, name } = decoded.payload ?? {}
+					if (!Array.isArray(elementIds) || typeof userId !== 'string' || !userId) {
+						break
+					}
+					const label = (typeof name === 'string' && name ? name : userId).slice(0, 80)
+					remoteHoldsRef.current = Object.fromEntries(
+						Object.entries(remoteHoldsRef.current).filter(([, hold]) => hold.userId !== userId),
+					)
+					for (const id of elementIds.slice(0, 50)) {
+						if (typeof id === 'string' && id.length <= 64) {
+							remoteHoldsRef.current[id] = { userId, name: label, expiresAt: Date.now() + VRIJTRACE_HOLD_TTL }
+						}
+					}
+					publishHolds()
+					break
+				}
 				default:
 					console.debug('[Collaboration] Unknown broadcast type:', decoded.type)
 					break
@@ -654,7 +709,7 @@ export function useCollaboration() {
 				console.error('[Collaboration] Error processing client broadcast:', error)
 			}
 		},
-		[queueSceneUpdate, updateCursorState, queueImageUpdate, updateViewportState, excalidrawAPI, fileId, applySceneReplacement],
+		[queueSceneUpdate, updateCursorState, queueImageUpdate, updateViewportState, excalidrawAPI, fileId, applySceneReplacement, publishHolds],
 	)
 
 	const handleSyncDesignate = useCallback((data: { isSyncer: boolean }) => {

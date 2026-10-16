@@ -92,6 +92,12 @@ export default function App({
 	}, [])
 	// empty -> the URL built into the Excalidraw bundle
 	const pdfApiUrl = useMemo(() => loadState('whiteboard', 'pdfApiUrl', '') || undefined, [])
+	// Vrij Tracé: trench planning on imported PDFs, behind the vrijtrace_enabled app setting
+	const vrijTraceEnabled = useMemo(() => loadState('whiteboard', 'vrijTraceEnabled', false) === true, [])
+	const vrijTraceUser = useMemo(() => {
+		const user = getCurrentUser()
+		return { uid: user?.uid ?? '', name: user?.displayName || user?.uid || t('whiteboard', 'Guest') }
+	}, [])
 	const maxImageSizeBytes = useMemo(() => (
 		maxImageSizeMb ? maxImageSizeMb * 1024 * 1024 : null
 	), [maxImageSizeMb])
@@ -132,7 +138,7 @@ export default function App({
 	const { renderTable } = useTableInsertion()
 	const { renderAssistant } = useAssistant()
 	const { renderEmojiPicker } = useEmojiPicker()
-	const { onChange: onChangeSync, onPointerUpdate } = useSync()
+	const { onChange: onChangeSync, onPointerUpdate, onVrijTraceEditing } = useSync()
 	const { fetchLibraryItems, updateLibraryItems, isLibraryLoaded, setIsLibraryLoaded } = useLibrary()
 	useCollaboration()
 	const { isReadOnly, refreshReadOnlyState } = useReadOnlyState()
@@ -644,6 +650,9 @@ export default function App({
 					initialData={initialDataPromise}
 					generateIdForFile={generateIdForFile}
 					pdfApiUrl={pdfApiUrl}
+					vrijTraceEnabled={vrijTraceEnabled && !isReadOnly && !isVersionPreview}
+					vrijTraceUser={vrijTraceUser}
+					onVrijTraceEditing={onVrijTraceEditing}
 					onPointerUpdate={onPointerUpdate}
 					onChange={handleOnChange}
 					viewModeEnabled={isReadOnly}

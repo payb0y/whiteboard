@@ -11,6 +11,7 @@ import { useExcalidrawStore } from '../stores/useExcalidrawStore'
 import { useJWTStore } from '../stores/useJwtStore'
 import { useCollaborationStore } from '../stores/useCollaborationStore'
 import { generateUrl } from '@nextcloud/router'
+import { getCurrentUser } from '@nextcloud/auth'
 import { useShallow } from 'zustand/react/shallow'
 import logger from '../utils/logger'
 import { sanitizeAppStateForSync } from '../utils/sanitizeAppState'
@@ -24,6 +25,7 @@ enum SyncMessageType {
 	ImageAdd = 'IMAGE_ADD',
 	MouseLocation = 'MOUSE_LOCATION',
 	ViewportUpdate = 'VIEWPORT_UPDATE',
+	VrijTraceEditing = 'VRIJTRACE_EDITING',
 	ServerBroadcast = 'server-broadcast',
 	ServerVolatileBroadcast = 'server-volatile-broadcast',
 }
@@ -32,6 +34,8 @@ const LOCAL_SYNC_DELAY = 1000
 const SERVER_API_SYNC_DELAY = 10000
 const WEBSOCKET_SYNC_DELAY = 500
 const CURSOR_SYNC_DELAY = 50
+/** re-announce held Vrij Tracé parts; receivers expire a hold after 8 s */
+const VRIJTRACE_HOLD_REFRESH = 3000
 
 export function useSync() {
 	const { fileId, isReadOnly } = useWhiteboardConfigStore(
@@ -309,6 +313,47 @@ export function useSync() {
 		[fileId, excalidrawAPI, socket, collabStatus],
 	)
 
+	// --- Vrij Tracé edit holds ---
+	// Sent over the regular room broadcast: the collaboration server's volatile
+	// channel relays only cursor and viewport messages.
+	const heldRef = useRef<string[]>([])
+	const sendHeld = useCallback(async () => {
+		if (!fileId || !socket || collabStatus !== 'online' || isReadOnly) {
+			return
+		}
+		try {
+			const user = getCurrentUser()
+			const token = await getJWT()
+			const jwtUser = token ? useJWTStore.getState().parseJwt(token)?.user : null
+			const userId = jwtUser?.id || user?.uid || socket.id || ''
+			const data = {
+				type: SyncMessageType.VrijTraceEditing,
+				payload: {
+					elementIds: heldRef.current,
+					userId,
+					name: user?.displayName || jwtUser?.name || userId,
+				},
+			}
+			socket.emit(SyncMessageType.ServerBroadcast, `${fileId}`, new TextEncoder().encode(JSON.stringify(data)), [])
+		} catch (error) {
+			logger.error('[Sync] Failed to announce Vrij Tracé holds:', error)
+		}
+	}, [fileId, socket, collabStatus, isReadOnly, getJWT])
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			if (heldRef.current.length) {
+				sendHeld()
+			}
+		}, VRIJTRACE_HOLD_REFRESH)
+		return () => clearInterval(timer)
+	}, [sendHeld])
+
+	const onVrijTraceEditing = useCallback((elementIds: string[]) => {
+		heldRef.current = elementIds
+		sendHeld()
+	}, [sendHeld])
+
 	const throttledSyncCursors = useMemo(() =>
 		throttle(doSyncCursors, CURSOR_SYNC_DELAY, { leading: true, trailing: true })
 	, [doSyncCursors])
@@ -460,5 +505,5 @@ export function useSync() {
 		}
 	}, [doSyncToLocal, doSyncToServerAPI, doFinalServerSync, throttledSyncToLocal, throttledSyncToServerAPI, throttledSyncViaWebSocket, throttledSyncCursors, excalidrawAPI, isReadOnly])
 
-	return { onChange, onPointerUpdate }
+	return { onChange, onPointerUpdate, onVrijTraceEditing }
 }

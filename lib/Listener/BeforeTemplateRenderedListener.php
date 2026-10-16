@@ -71,6 +71,7 @@ class BeforeTemplateRenderedListener implements IEventListener {
 		$this->initialState->provideInitialState('collabBackendUrl', $this->configService->getCollabBackendUrl());
 		$this->initialState->provideInitialState('maxFileSize', $this->configService->getMaxFileSize());
 		$this->initialState->provideInitialState('pdfApiUrl', $this->configService->getPdfApiUrl());
+		$this->initialState->provideInitialState('vrijTraceEnabled', $this->configService->getVrijTraceEnabled());
 		$user = $this->userSession->getUser();
 		$this->initialState->provideInitialState(
 			'autoUploadOnDisconnect',

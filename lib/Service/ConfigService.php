@@ -100,6 +100,11 @@ final class ConfigService {
 		return $this->appConfig->getAppValueBool('disable_external_libraries');
 	}
 
+	/** Vrij Tracé (trench planning on imported PDFs); off until enabled with occ */
+	public function getVrijTraceEnabled(): bool {
+		return $this->appConfig->getAppValueBool('vrijtrace_enabled', false);
+	}
+
 	public function getUserAutoUploadOnDisconnect(?string $userId): bool {
 		if (!$userId) {
 			return false;

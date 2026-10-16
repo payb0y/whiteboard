@@ -55,7 +55,7 @@ type Side = "beide" | "links" | "rechts";
 
 ## 2. Interaction and UI
 
-- Toolbar button **Vrij Tracé** (key S) next to the ruler/text bubble tools; hidden when
+- Toolbar button **Vrij Tracé** (key **U** — `S` already opens the stroke-colour picker) next to the ruler/text bubble tools; hidden when
   `vrijtrace_enabled` is off or the board is read-only.
 - Acts only over an imported PDF page (`isImageElement && customData.isPdf`). Elsewhere: cursor
   `not-allowed`; a click flashes the page edge and toasts "Sleuven teken je alleen op een
@@ -137,8 +137,10 @@ Pure module (no Excalidraw imports), metres in page frame, `clipper-lib`, arc to
 - Duplicating / copy-pasting a PDF page copies its network with all ids remapped (network id
   becomes `vrijtrace-<new pdf id>`, segment `a`/`b` follow their nodes).
 - Undo: one step per action for the acting user (Excalidraw history).
-- Restore: drop parts with unknown `kind`, segments without both nodes, trench parts without
-  a PDF parent; clamp widths to 0.30–2.30 m and work width to 0.50–4.00 m.
+- Restore validates each element on its own: drop parts with an unknown `kind` or without a
+  PDF parent, clamp widths to 0.30–2.30 m and work width to 0.50–4.00 m. Segments whose nodes
+  are missing are kept and simply not drawn (restore also runs on partial collaboration
+  updates, where a segment can arrive before its nodes).
 - Read-only, public share and recording render everything; the tool is hidden.
 
 ## 6. Testing and rollout

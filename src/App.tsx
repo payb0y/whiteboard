@@ -93,7 +93,7 @@ export default function App({
 	// empty -> the URL built into the Excalidraw bundle
 	const pdfApiUrl = useMemo(() => loadState('whiteboard', 'pdfApiUrl', '') || undefined, [])
 	// Vrij Tracé: trench planning on imported PDFs, behind the vrijtrace_enabled app setting
-	const vrijTraceEnabled = useMemo(() => loadState('whiteboard', 'vrijTraceEnabled', false) === true, [])
+	const vrijTraceEnabled = useMemo(() => loadState<boolean>('whiteboard', 'vrijTraceEnabled', false) === true, [])
 	const vrijTraceUser = useMemo(() => {
 		const user = getCurrentUser()
 		return { uid: user?.uid ?? '', name: user?.displayName || user?.uid || t('whiteboard', 'Guest') }

@@ -42,7 +42,16 @@ enum BroadcastType {
 /** a colleague's Vrij Tracé hold lapses unless re-announced (every 3 s) */
 const VRIJTRACE_HOLD_TTL = 8000
 
-type RemoteHolds = Record<string, { userId: string, name: string, expiresAt: number }>
+type RemoteHold = { userId: string, name: string, expiresAt: number }
+type RemoteHolds = Record<string, RemoteHold>
+
+/**
+ * The holds that pass `keep`.
+ * @param holds holds by element id
+ * @param keep whether to keep a hold
+ */
+const filterHolds = (holds: RemoteHolds, keep: (hold: RemoteHold) => boolean): RemoteHolds =>
+	Object.fromEntries((Object.entries(holds) as [string, RemoteHold][]).filter(([, hold]) => keep(hold)))
 
 const CURSOR_UPDATE_DELAY = 50
 
@@ -67,9 +76,7 @@ export function useCollaboration() {
 	const remoteHoldsRef = useRef<RemoteHolds>({})
 	const publishHolds = useCallback(() => {
 		const now = Date.now()
-		remoteHoldsRef.current = Object.fromEntries(
-			Object.entries(remoteHoldsRef.current).filter(([, hold]) => hold.expiresAt > now),
-		)
+		remoteHoldsRef.current = filterHolds(remoteHoldsRef.current, (hold) => hold.expiresAt > now)
 		excalidrawAPI?.updateScene({
 			// app state key added by the Vrij Tracé fork build
 			appState: { vrijTraceRemoteHolds: { ...remoteHoldsRef.current } } as never,
@@ -324,9 +331,7 @@ export function useCollaboration() {
 
 			// holds of colleagues who left lapse at once
 			const before = Object.keys(remoteHoldsRef.current).length
-			remoteHoldsRef.current = Object.fromEntries(
-				Object.entries(remoteHoldsRef.current).filter(([, hold]) => newCollaborators.has(hold.userId)),
-			)
+			remoteHoldsRef.current = filterHolds(remoteHoldsRef.current, (hold) => newCollaborators.has(hold.userId))
 			if (Object.keys(remoteHoldsRef.current).length !== before) {
 				publishHolds()
 			}
@@ -690,9 +695,7 @@ export function useCollaboration() {
 						break
 					}
 					const label = (typeof name === 'string' && name ? name : userId).slice(0, 80)
-					remoteHoldsRef.current = Object.fromEntries(
-						Object.entries(remoteHoldsRef.current).filter(([, hold]) => hold.userId !== userId),
-					)
+					remoteHoldsRef.current = filterHolds(remoteHoldsRef.current, (hold) => hold.userId !== userId)
 					for (const id of elementIds.slice(0, 50)) {
 						if (typeof id === 'string' && id.length <= 64) {
 							remoteHoldsRef.current[id] = { userId, name: label, expiresAt: Date.now() + VRIJTRACE_HOLD_TTL }

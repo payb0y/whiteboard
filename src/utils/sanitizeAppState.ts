@@ -5,13 +5,16 @@
 
 import type { AppState } from '@excalidraw/excalidraw/types/types'
 
-const NON_TRANSFERRED_KEYS: Array<keyof AppState> = [
+const NON_TRANSFERRED_KEYS: Array<keyof AppState | string> = [
 	'collaborators',
 	'selectedElementIds',
 	'width',
 	'height',
 	'offsetTop',
 	'offsetLeft',
+	// Vrij Tracé: this user's tool state and colleagues' edit holds
+	'vrijTrace',
+	'vrijTraceRemoteHolds',
 ]
 
 export function sanitizeAppStateForSync(state: Partial<AppState> | AppState | null | undefined): Partial<AppState> {

@@ -1,0 +1,291 @@
+{
+	"type": "excalidrawlib",
+	"version": 2,
+	"source": "inzicht-whiteboard",
+	"name": "Boring / zinker",
+	"libraryItems": [
+		{
+			"id": "inzicht-boring",
+			"status": "published",
+			"created": 1793577600000,
+			"name": "Boring",
+			"elements": [
+				{
+					"id": "inzicht-boring-0",
+					"type": "line",
+					"x": 11,
+					"y": 30,
+					"width": 38,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#868e96",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1.5,
+					"strokeStyle": "dotted",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-boring-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 812710,
+					"version": 1,
+					"versionNonce": 820629,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							38,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-boring-1",
+					"type": "ellipse",
+					"x": 5,
+					"y": 27,
+					"width": 6,
+					"height": 6,
+					"angle": 0,
+					"strokeColor": "#868e96",
+					"backgroundColor": "#ffffff",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-boring-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 828548,
+					"version": 1,
+					"versionNonce": 836467,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-boring-2",
+					"type": "ellipse",
+					"x": 49,
+					"y": 27,
+					"width": 6,
+					"height": 6,
+					"angle": 0,
+					"strokeColor": "#868e96",
+					"backgroundColor": "#ffffff",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-boring-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 844386,
+					"version": 1,
+					"versionNonce": 852305,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				}
+			]
+		},
+		{
+			"id": "inzicht-zinker",
+			"status": "published",
+			"created": 1793577600000,
+			"name": "Zinker",
+			"elements": [
+				{
+					"id": "inzicht-zinker-0",
+					"type": "line",
+					"x": 0,
+					"y": 30,
+					"width": 20,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#868e96",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1.5,
+					"strokeStyle": "dotted",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-zinker-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 860224,
+					"version": 1,
+					"versionNonce": 868143,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							20,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-zinker-1",
+					"type": "line",
+					"x": 40,
+					"y": 30,
+					"width": 20,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#868e96",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1.5,
+					"strokeStyle": "dotted",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-zinker-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 876062,
+					"version": 1,
+					"versionNonce": 883981,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							20,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-zinker-2",
+					"type": "rectangle",
+					"x": 20,
+					"y": 22,
+					"width": 20,
+					"height": 16,
+					"angle": 0,
+					"strokeColor": "#495057",
+					"backgroundColor": "#ffffff",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-zinker-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 891900,
+					"version": 1,
+					"versionNonce": 899819,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-zinker-3",
+					"type": "line",
+					"x": 20,
+					"y": 22,
+					"width": 20,
+					"height": 9,
+					"angle": 0,
+					"strokeColor": "#495057",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-zinker-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 907738,
+					"version": 1,
+					"versionNonce": 915657,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							10,
+							9
+						],
+						[
+							20,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				}
+			]
+		}
+	]
+}

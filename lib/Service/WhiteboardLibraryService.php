@@ -19,6 +19,7 @@ use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
 use OCP\Files\Template\ITemplateManager;
 use OCP\Lock\LockedException;
+use Psr\Log\LoggerInterface;
 
 /**
  * @psalm-suppress UndefinedDocblockClass
@@ -26,10 +27,45 @@ use OCP\Lock\LockedException;
  * @psalm-suppress MissingDependency
  */
 final class WhiteboardLibraryService {
+	/** Library files bundled with the app, shown to every user */
+	private const DEFAULT_LIBRARY_DIR = __DIR__ . '/../../library';
+	/** Ids of the bundled items start with this; they are never saved per user */
+	private const DEFAULT_ITEM_PREFIX = 'inzicht-';
+
 	public function __construct(
 		private ITemplateManager $templateManager,
 		private IRootFolder $rootFolder,
+		private LoggerInterface $logger,
 	) {
+	}
+
+	/**
+	 * The bundled library files, in file name order. Each one is a group in
+	 * the library sidebar, titled by the file's "name".
+	 */
+	public function getDefaultLibs(): array {
+		$paths = glob(self::DEFAULT_LIBRARY_DIR . '/*.excalidrawlib') ?: [];
+		sort($paths);
+		$libs = [];
+
+		foreach ($paths as $path) {
+			try {
+				$content = file_get_contents($path);
+				if ($content === false) {
+					throw new GenericFileException('Cannot read ' . $path);
+				}
+				$lib = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+			} catch (JsonException|GenericFileException $e) {
+				// one broken bundled file must not take the user's own library down
+				$this->logger->warning('Skipping default library file ' . basename($path), ['exception' => $e]);
+				continue;
+			}
+			$lib['basename'] = basename($path);
+			$lib['default'] = true;
+			$libs[] = $lib;
+		}
+
+		return $libs;
 	}
 
 	/**
@@ -69,7 +105,7 @@ final class WhiteboardLibraryService {
 			}
 		}
 
-		return $libs;
+		return array_merge($this->getDefaultLibs(), $libs);
 	}
 
 	/**
@@ -103,6 +139,9 @@ final class WhiteboardLibraryService {
 		];
 
 		foreach ($items as $item) {
+			if (str_starts_with((string)($item['id'] ?? ''), self::DEFAULT_ITEM_PREFIX)) {
+				continue;
+			}
 			if (!isset($item['filename'])) {
 				$files['personal.excalidrawlib']['libraryItems'][] = $item;
 			} else {

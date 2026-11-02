@@ -7,12 +7,9 @@ import { useCallback, useState } from 'react'
 import { useJWTStore } from '../stores/useJwtStore'
 import { useShallow } from 'zustand/react/shallow'
 import { generateUrl } from '@nextcloud/router'
-import type { LibraryItem, LibraryItems } from '@excalidraw/excalidraw/types/types'
+import type { LibraryItems } from '@excalidraw/excalidraw/types/types'
 import logger from '../utils/logger'
-
-type LibraryItemExtended = LibraryItem & {
-	filename?: string;
-}
+import { libraryItemsFromFiles, withoutDefaultItems } from '../utils/libraryItems'
 
 export function useLibrary() {
 	const { getJWT } = useJWTStore(
@@ -45,47 +42,7 @@ export function useLibrary() {
 			}
 
 			const data = await response.json()
-			const libraryItems: LibraryItems = []
-
-			for (const file of data.data) {
-				if (!file.library && !file.libraryItems) {
-					continue
-				}
-
-				const date = new Date()
-
-				// Handle for version 1 (legacy library files from https://excalidraw.com)
-				if (file.library) {
-					for (const elements of file.library) {
-						const item: LibraryItemExtended = {
-							id: '',
-							created: date.getTime(),
-							status: 'published',
-							elements,
-							filename: file.filename,
-						}
-						libraryItems.push(item)
-					}
-				}
-
-				// Handle for version 2
-				if (file.libraryItems) {
-					for (const item of file.libraryItems) {
-						if (!item.elements || item.elements.length === 0) {
-							continue
-						}
-						const libraryItem: LibraryItemExtended = {
-							id: item.id,
-							created: item.created || date.getTime(),
-							status: item.status || 'unpublished',
-							elements: item.elements,
-							filename: file.filename,
-						}
-						libraryItems.push(libraryItem)
-					}
-				}
-			}
-			return libraryItems
+			return libraryItemsFromFiles(data.data) as LibraryItems
 		} catch (error) {
 			logger.error('[Library] Error fetching library:', error)
 			return null
@@ -107,7 +64,7 @@ export function useLibrary() {
 					'X-Requested-With': 'XMLHttpRequest',
 					Authorization: `Bearer ${jwt}`,
 				},
-				body: JSON.stringify({ items }),
+				body: JSON.stringify({ items: withoutDefaultItems(items) }),
 			})
 
 			if (!response.ok) {

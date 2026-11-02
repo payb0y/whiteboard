@@ -1,0 +1,771 @@
+{
+	"type": "excalidrawlib",
+	"version": 2,
+	"source": "inzicht-whiteboard",
+	"name": "aVP",
+	"libraryItems": [
+		{
+			"id": "inzicht-avp-rond",
+			"status": "published",
+			"created": 1793577600000,
+			"name": "aVP rond",
+			"elements": [
+				{
+					"id": "inzicht-avp-rond-0",
+					"type": "ellipse",
+					"x": 4,
+					"y": 4,
+					"width": 52,
+					"height": 52,
+					"angle": 0,
+					"strokeColor": "#ffa8a8",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-rond-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 100000,
+					"version": 1,
+					"versionNonce": 107919,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-rond-1",
+					"type": "ellipse",
+					"x": 11,
+					"y": 11,
+					"width": 38,
+					"height": 38,
+					"angle": 0,
+					"strokeColor": "#ffa8a8",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-rond-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 115838,
+					"version": 1,
+					"versionNonce": 123757,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-rond-2",
+					"type": "ellipse",
+					"x": 18,
+					"y": 18,
+					"width": 24,
+					"height": 24,
+					"angle": 0,
+					"strokeColor": "#ffa8a8",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-rond-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 131676,
+					"version": 1,
+					"versionNonce": 139595,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-rond-3",
+					"type": "ellipse",
+					"x": 25,
+					"y": 25,
+					"width": 10,
+					"height": 10,
+					"angle": 0,
+					"strokeColor": "#ffa8a8",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-rond-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 147514,
+					"version": 1,
+					"versionNonce": 155433,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-rond-4",
+					"type": "ellipse",
+					"x": 28.4,
+					"y": 28.4,
+					"width": 3.2,
+					"height": 3.2,
+					"angle": 0,
+					"strokeColor": "#e03131",
+					"backgroundColor": "#e03131",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-rond-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 163352,
+					"version": 1,
+					"versionNonce": 171271,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				}
+			]
+		},
+		{
+			"id": "inzicht-avp-kast",
+			"status": "published",
+			"created": 1793577600000,
+			"name": "aVP kast",
+			"elements": [
+				{
+					"id": "inzicht-avp-kast-0",
+					"type": "rectangle",
+					"x": 5,
+					"y": 5,
+					"width": 50,
+					"height": 50,
+					"angle": 0,
+					"strokeColor": "#ffa8a8",
+					"backgroundColor": "#f1f3f5",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 179190,
+					"version": 1,
+					"versionNonce": 187109,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-kast-1",
+					"type": "line",
+					"x": 5,
+					"y": 13,
+					"width": 50,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 195028,
+					"version": 1,
+					"versionNonce": 202947,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							50,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-2",
+					"type": "line",
+					"x": 5,
+					"y": 21,
+					"width": 50,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 210866,
+					"version": 1,
+					"versionNonce": 218785,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							50,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-3",
+					"type": "line",
+					"x": 5,
+					"y": 29,
+					"width": 50,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 226704,
+					"version": 1,
+					"versionNonce": 234623,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							50,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-4",
+					"type": "line",
+					"x": 5,
+					"y": 37,
+					"width": 50,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 242542,
+					"version": 1,
+					"versionNonce": 250461,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							50,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-5",
+					"type": "line",
+					"x": 5,
+					"y": 45,
+					"width": 50,
+					"height": 0,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 258380,
+					"version": 1,
+					"versionNonce": 266299,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							50,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-6",
+					"type": "line",
+					"x": 17,
+					"y": 5,
+					"width": 0,
+					"height": 50,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 274218,
+					"version": 1,
+					"versionNonce": 282137,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							50
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-7",
+					"type": "line",
+					"x": 30,
+					"y": 5,
+					"width": 0,
+					"height": 50,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 290056,
+					"version": 1,
+					"versionNonce": 297975,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							50
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-8",
+					"type": "line",
+					"x": 43,
+					"y": 5,
+					"width": 0,
+					"height": 50,
+					"angle": 0,
+					"strokeColor": "#ced4da",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 0.5,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 305894,
+					"version": 1,
+					"versionNonce": 313813,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							50
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-kast-9",
+					"type": "rectangle",
+					"x": 17,
+					"y": 23,
+					"width": 26,
+					"height": 14,
+					"angle": 0,
+					"strokeColor": "#e03131",
+					"backgroundColor": "#495057",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-kast-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 321732,
+					"version": 1,
+					"versionNonce": 329651,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				}
+			]
+		},
+		{
+			"id": "inzicht-avp-gebouw",
+			"status": "published",
+			"created": 1793577600000,
+			"name": "aVP gebouw",
+			"elements": [
+				{
+					"id": "inzicht-avp-gebouw-0",
+					"type": "line",
+					"x": 5,
+					"y": 8,
+					"width": 50,
+					"height": 46,
+					"angle": 0,
+					"strokeColor": "#ffa8a8",
+					"backgroundColor": "#f8f9fa",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-gebouw-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 337570,
+					"version": 1,
+					"versionNonce": 345489,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							50,
+							0
+						],
+						[
+							50,
+							38
+						],
+						[
+							33,
+							38
+						],
+						[
+							29,
+							46
+						],
+						[
+							27,
+							38
+						],
+						[
+							0,
+							38
+						],
+						[
+							0,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				},
+				{
+					"id": "inzicht-avp-gebouw-1",
+					"type": "rectangle",
+					"x": 9,
+					"y": 12,
+					"width": 12,
+					"height": 5,
+					"angle": 0,
+					"strokeColor": "#adb5bd",
+					"backgroundColor": "#adb5bd",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-gebouw-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 353408,
+					"version": 1,
+					"versionNonce": 361327,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-gebouw-2",
+					"type": "rectangle",
+					"x": 40,
+					"y": 12,
+					"width": 12,
+					"height": 5,
+					"angle": 0,
+					"strokeColor": "#adb5bd",
+					"backgroundColor": "#adb5bd",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-gebouw-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 369246,
+					"version": 1,
+					"versionNonce": 377165,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-gebouw-3",
+					"type": "rectangle",
+					"x": 24,
+					"y": 22,
+					"width": 12,
+					"height": 14,
+					"angle": 0,
+					"strokeColor": "#adb5bd",
+					"backgroundColor": "#adb5bd",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-gebouw-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 385084,
+					"version": 1,
+					"versionNonce": 393003,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				},
+				{
+					"id": "inzicht-avp-gebouw-4",
+					"type": "rectangle",
+					"x": 46,
+					"y": 24,
+					"width": 5,
+					"height": 10,
+					"angle": 0,
+					"strokeColor": "#adb5bd",
+					"backgroundColor": "#adb5bd",
+					"fillStyle": "solid",
+					"strokeWidth": 1,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-avp-gebouw-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 400922,
+					"version": 1,
+					"versionNonce": 408841,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false
+				}
+			]
+		}
+	]
+}

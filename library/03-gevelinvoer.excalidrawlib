@@ -1,0 +1,68 @@
+{
+	"type": "excalidrawlib",
+	"version": 2,
+	"source": "inzicht-whiteboard",
+	"name": "Gevelinvoer",
+	"libraryItems": [
+		{
+			"id": "inzicht-gevelinvoer",
+			"status": "published",
+			"created": 1793577600000,
+			"name": "Gevelinvoer",
+			"elements": [
+				{
+					"id": "inzicht-gevelinvoer-0",
+					"type": "line",
+					"x": 30,
+					"y": 12,
+					"width": 40,
+					"height": 34,
+					"angle": 0,
+					"strokeColor": "#495057",
+					"backgroundColor": "transparent",
+					"fillStyle": "solid",
+					"strokeWidth": 2,
+					"strokeStyle": "solid",
+					"roughness": 0,
+					"opacity": 100,
+					"groupIds": [
+						"inzicht-gevelinvoer-g"
+					],
+					"frameId": null,
+					"roundness": null,
+					"seed": 796872,
+					"version": 1,
+					"versionNonce": 804791,
+					"isDeleted": false,
+					"boundElements": null,
+					"updated": 1793577600000,
+					"link": null,
+					"locked": false,
+					"points": [
+						[
+							0,
+							0
+						],
+						[
+							20,
+							34
+						],
+						[
+							-20,
+							34
+						],
+						[
+							0,
+							0
+						]
+					],
+					"lastCommittedPoint": null,
+					"startBinding": null,
+					"endBinding": null,
+					"startArrowhead": null,
+					"endArrowhead": null
+				}
+			]
+		}
+	]
+}

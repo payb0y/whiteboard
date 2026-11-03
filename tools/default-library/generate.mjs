@@ -5,166 +5,163 @@
  * Writes the default library files (library/*.excalidrawlib) that every user
  * sees under "In Zicht bibliotheek". Each file is one group in the sidebar.
  *
- * The symbols are placeholders redrawn from the client's screenshots; replace
- * them with the client's own library file when it arrives. Item ids must keep
- * the "inzicht-" prefix: the app never saves those into a user's own library.
+ * The drawings come from the client's own library (client-symbols.excalidrawlib,
+ * in the order they drew them); this script names and groups them and sets how
+ * each one scales on a calibrated PDF page (customData on every element):
+ *
+ * - libraryCmPerPx: real size. The trees are drawn at 65 px per metre, so their
+ *   test ring keeps its true radius (CINH: 3,00 / 1,75 / 2,00 / 1,25 / 1,00 m).
+ * - librarySymbol: a symbol with no physical size; never resized.
+ * - neither: drawn at the board's scale, like a user's own items.
+ *
+ * Boring and boogzinker are rebuilt so their length can be dragged while the
+ * end circles / the box keep their size. Item ids keep the "inzicht-" prefix:
+ * the app never saves those into a user's own library.
  *
  *   node tools/default-library/generate.mjs
  */
-import { mkdirSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const OUT = join(dirname(fileURLToPath(import.meta.url)), '../../library')
-const CREATED = Date.UTC(2026, 10, 2)
+const HERE = dirname(fileURLToPath(import.meta.url))
+const OUT = join(HERE, '../../library')
+const CREATED = Date.UTC(2026, 10, 3)
 
-// deterministic seeds so regenerating gives the same files
-let counter = 0
-const seed = () => 100000 + (counter++ * 7919) % 900000
+const source = JSON.parse(readFileSync(join(HERE, 'client-symbols.excalidrawlib'), 'utf8')).libraryItems
 
-const base = (id, type, x, y, width, height, style = {}) => ({
+/** 65 px on the drawing is 1 m on the ground */
+const TREE_CM_PER_PX = 100 / 65
+const REAL_SIZE = { libraryCmPerPx: TREE_CM_PER_PX }
+const SYMBOL = { librarySymbol: true }
+
+/** the client's drawing number n, with stable ids and the given scaling */
+const copy = (n, slug, name, customData) => {
+	const itemId = `inzicht-${slug}`
+	const groups = new Map()
+	const elements = source[n].elements.filter(e => !e.isDeleted).map((element, i) => ({
+		...element,
+		id: `${itemId}-${i}`,
+		groupIds: element.groupIds.map(g => {
+			if (!groups.has(g)) groups.set(g, `${itemId}-g${groups.size || ''}`)
+			return groups.get(g)
+		}),
+		boundElements: null,
+		frameId: null,
+		updated: CREATED,
+		...(customData ? { customData } : {}),
+	}))
+	return { id: itemId, status: 'published', created: CREATED, name, elements }
+}
+
+const linear = (id, type, x, y, points, style) => ({
 	id,
 	type,
 	x,
 	y,
-	width,
-	height,
+	width: Math.max(...points.map(p => p[0])) - Math.min(...points.map(p => p[0])),
+	height: Math.max(...points.map(p => p[1])) - Math.min(...points.map(p => p[1])),
 	angle: 0,
-	strokeColor: '#1e1e1e',
+	strokeColor: '#111111',
 	backgroundColor: 'transparent',
 	fillStyle: 'solid',
-	strokeWidth: 1,
-	strokeStyle: 'solid',
+	strokeWidth: 3,
+	strokeStyle: 'dashed',
 	roughness: 0,
 	opacity: 100,
 	groupIds: [],
 	frameId: null,
 	roundness: null,
-	seed: seed(),
+	seed: 1000 + id.length * 31,
 	version: 1,
-	versionNonce: seed(),
+	versionNonce: 2000 + id.length * 37,
 	isDeleted: false,
 	boundElements: null,
 	updated: CREATED,
 	link: null,
 	locked: false,
+	points,
+	lastCommittedPoint: null,
+	startBinding: null,
+	endBinding: null,
+	startArrowhead: null,
+	endArrowhead: null,
+	elbowed: false,
+	customData: SYMBOL,
 	...style,
 })
 
-/** builds one library item; every shape in it shares a group so it moves as one */
-const item = (id, name, draw) => {
-	const itemId = `inzicht-${id}`
-	const gid = `${itemId}-g`
-	const elements = []
-	const add = (type, x, y, w, h, style, extra = {}) => {
-		elements.push({ ...base(`${itemId}-${elements.length}`, type, x, y, w, h, style), ...extra, groupIds: [gid] })
-	}
-	const shape = {
-		rect: (x, y, w, h, style) => add('rectangle', x, y, w, h, style),
-		circle: (cx, cy, r, style) => add('ellipse', cx - r, cy - r, 2 * r, 2 * r, style),
-		/** open or closed polyline through absolute points */
-		line: (pts, style, closed = false) => {
-			const xs = pts.map(p => p[0])
-			const ys = pts.map(p => p[1])
-			const x0 = Math.min(...xs)
-			const y0 = Math.min(...ys)
-			const rel = pts.map(([x, y]) => [x - pts[0][0], y - pts[0][1]])
-			if (closed) rel.push([0, 0])
-			add('line', pts[0][0], pts[0][1], Math.max(...xs) - x0, Math.max(...ys) - y0, style, {
-				points: rel,
-				lastCommittedPoint: null,
-				startBinding: null,
-				endBinding: null,
-				startArrowhead: null,
-				endArrowhead: null,
-			})
-		},
-	}
-	draw(shape)
-	return { id: itemId, status: 'published', created: CREATED, name, elements }
+const avp = [
+	copy(0, 'avp-rond', 'aVP rond'),
+	copy(1, 'avp-kast', 'aVP kast'),
+	copy(2, 'avp-gebouw', 'aVP gebouw'),
+]
+
+// drawings 3-14: red, blue, green, orange, each 16,5 / 24 / 30 px thick
+const mantelbuizen = ['rood', 'blauw', 'groen', 'oranje'].flatMap((colour, c) =>
+	['klein', 'middel', 'groot'].map((size, s) =>
+		copy(3 + c * 3 + s, `mantelbuis-${colour}-${size}`, `Mantelbuis ${colour} ${size}`)))
+
+// drawings 15-20: per class without, then with a PVC root screen (CINH)
+const TREES = [
+	['c1', 'C1 groot >12 m', '3,00 m', '1,75 m'],
+	['c2', 'C2 middel 6-12 m', '2,00 m', '1,25 m'],
+	['c3', 'C3 klein <6 m', '1,00 m', '1,00 m'],
+]
+const bomen = TREES.flatMap(([slug, label, without, withScreen], t) => [
+	copy(15 + t * 2, `boom-${slug}-zonder`, `Boom ${label}, zonder bescherming (toetsstraal ${without})`, REAL_SIZE),
+	copy(16 + t * 2, `boom-${slug}-met`, `Boom ${label}, met PVC-wortelscherm (toetsstraal ${withScreen})`, REAL_SIZE),
+])
+
+const gevelinvoer = [copy(21, 'gevelinvoer', 'Gevelinvoer', SYMBOL)]
+
+// boring: a dashed line whose ends are open circles that keep their size
+const boring = {
+	id: 'inzicht-boring',
+	status: 'published',
+	created: CREATED,
+	name: 'Boring',
+	elements: [
+		linear('inzicht-boring-0', 'arrow', 0, 0, [[0, 0], [215, 0]], {
+			strokeWidth: 4,
+			startArrowhead: 'circle_outline',
+			endArrowhead: 'circle_outline',
+		}),
+	],
 }
 
-const RED = '#e03131'
-const RED_LIGHT = '#ffa8a8'
-
-const avp = [
-	item('avp-rond', 'aVP rond', s => {
-		for (const r of [26, 19, 12, 5]) s.circle(30, 30, r, { strokeColor: RED_LIGHT })
-		s.circle(30, 30, 1.6, { strokeColor: RED, backgroundColor: RED })
+// boogzinker: the client's box symbol with a dashed line bound to each side,
+// so dragging a line end changes the length and moving the box drags both
+const zinker = copy(23, 'boogzinker', 'Boogzinker', SYMBOL)
+const [, box, curve] = zinker.elements
+const boxId = 'inzicht-boogzinker-box'
+const left = 'inzicht-boogzinker-in'
+const right = 'inzicht-boogzinker-uit'
+const midY = box.y + box.height / 2
+// a gap of 0 would make Excalidraw aim the lines at the box centre once it moves
+const GAP = 1
+zinker.elements = [
+	{ ...box, id: boxId, boundElements: [{ id: left, type: 'arrow' }, { id: right, type: 'arrow' }] },
+	curve,
+	linear(left, 'arrow', 0, midY, [[0, 0], [box.x - GAP, 0]], {
+		endBinding: { elementId: boxId, focus: 0, gap: GAP },
 	}),
-	item('avp-kast', 'aVP kast', s => {
-		s.rect(5, 5, 50, 50, { strokeColor: RED_LIGHT, backgroundColor: '#f1f3f5' })
-		for (const y of [13, 21, 29, 37, 45]) s.line([[5, y], [55, y]], { strokeColor: '#ced4da', strokeWidth: 0.5 })
-		for (const x of [17, 30, 43]) s.line([[x, 5], [x, 55]], { strokeColor: '#ced4da', strokeWidth: 0.5 })
-		s.rect(17, 23, 26, 14, { strokeColor: RED, backgroundColor: '#495057' })
-	}),
-	item('avp-gebouw', 'aVP gebouw', s => {
-		s.line([[5, 8], [55, 8], [55, 46], [38, 46], [34, 54], [32, 46], [5, 46]],
-			{ strokeColor: RED_LIGHT, backgroundColor: '#f8f9fa' }, true)
-		for (const [x, y, w, h] of [[9, 12, 12, 5], [40, 12, 12, 5], [24, 22, 12, 14], [46, 24, 5, 10]]) {
-			s.rect(x, y, w, h, { strokeColor: '#adb5bd', backgroundColor: '#adb5bd' })
-		}
+	linear(right, 'arrow', box.x + box.width + GAP, midY, [[0, 0], [230 - box.x - box.width - GAP, 0]], {
+		startBinding: { elementId: boxId, focus: 0, gap: GAP },
 	}),
 ]
-
-const COLOURS = [
-	['rood', 'Rood', '#e03131', '#a51d1d'],
-	['blauw', 'Blauw', '#1c7ed6', '#1864ab'],
-	['groen', 'Groen', '#2f9e44', '#1f6e30'],
-	['oranje', 'Oranje', '#f76707', '#c24e02'],
-]
-const SIZES = [['klein', 4], ['middel', 7], ['groot', 10]]
-const mantelbuizen = COLOURS.flatMap(([key, label, fill, dark]) =>
-	SIZES.map(([size, h]) => item(`mantelbuis-${key}-${size}`, `Mantelbuis ${label.toLowerCase()} ${size}`, s => {
-		s.rect(0, 30 - h / 2, 80, h, { strokeColor: dark, backgroundColor: fill })
-		s.rect(0, 30 - h / 2, 3, h, { strokeColor: '#212529', backgroundColor: '#212529' })
-	})))
-
-const gevelinvoer = [
-	item('gevelinvoer', 'Gevelinvoer', s => {
-		s.line([[30, 12], [50, 46], [10, 46]], { strokeColor: '#495057', strokeWidth: 2 }, true)
-	}),
-]
-
-const GREY = '#868e96'
-const boringZinker = [
-	item('boring', 'Boring', s => {
-		s.line([[11, 30], [49, 30]], { strokeColor: GREY, strokeWidth: 1.5, strokeStyle: 'dotted' })
-		s.circle(8, 30, 3, { strokeColor: GREY, backgroundColor: '#ffffff' })
-		s.circle(52, 30, 3, { strokeColor: GREY, backgroundColor: '#ffffff' })
-	}),
-	item('zinker', 'Zinker', s => {
-		s.line([[0, 30], [20, 30]], { strokeColor: GREY, strokeWidth: 1.5, strokeStyle: 'dotted' })
-		s.line([[40, 30], [60, 30]], { strokeColor: GREY, strokeWidth: 1.5, strokeStyle: 'dotted' })
-		s.rect(20, 22, 20, 16, { strokeColor: '#495057', backgroundColor: '#ffffff' })
-		s.line([[20, 22], [30, 31], [40, 22]], { strokeColor: '#495057' })
-	}),
-]
-
-const CLASSES = [['I', 10], ['II', 14], ['III', 18]]
-const bomen = [['met', true], ['zonder', false]].flatMap(([word, protectedTree]) =>
-	CLASSES.map(([cls, r]) => item(`boom-${cls.toLowerCase()}-${word}`, `Boom klasse ${cls} ${word} bescherming`, s => {
-		const c = 40
-		s.circle(c, c, protectedTree ? r + 12 : r + 20, {
-			strokeColor: '#f59f00',
-			strokeStyle: protectedTree ? 'dotted' : 'dashed',
-			opacity: protectedTree ? 60 : 100,
-		})
-		s.circle(c, c, r, { strokeColor: '#2f9e44', backgroundColor: '#8ce99a' })
-		s.circle(c, c, 1.5, { strokeColor: '#a61e4d', backgroundColor: '#a61e4d' })
-	})))
 
 const FILES = [
 	['01-avp', 'aVP', avp],
 	['02-mantelbuizen', 'Mantelbuizen', mantelbuizen],
 	['03-gevelinvoer', 'Gevelinvoer', gevelinvoer],
-	['04-boring-zinker', 'Boring / zinker', boringZinker],
+	['04-boring-zinker', 'Boring / zinker', [boring, zinker]],
 	['05-bomen', 'Bomen', bomen],
 ]
 
 mkdirSync(OUT, { recursive: true })
 for (const [file, name, libraryItems] of FILES) {
 	const lib = { type: 'excalidrawlib', version: 2, source: 'inzicht-whiteboard', name, libraryItems }
-	writeFileSync(join(OUT, `${file}.excalidrawlib`), JSON.stringify(lib, null, '\t') + '\n')
+	writeFileSync(join(OUT, `${file}.excalidrawlib`), JSON.stringify(lib) + '\n')
 	console.log(`${file}.excalidrawlib: ${libraryItems.length} items`)
 }

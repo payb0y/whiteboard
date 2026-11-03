@@ -9,10 +9,11 @@
  * in the order they drew them); this script names and groups them and sets how
  * each one scales on a calibrated PDF page (customData on every element):
  *
- * - libraryCmPerPx: real size. The trees are drawn at 65 px per metre, so their
- *   test ring keeps its true radius (CINH: 3,00 / 1,75 / 2,00 / 1,25 / 1,00 m).
+ * - libraryCmPerPx: real size, as agreed with the client: aVP search rings
+ *   50-200 m, outdoor aVP 5,00 x 5,00 m, indoor aVP room 4,00 x 3,00 m, ducts
+ *   110 / 160 / 200 mm across, tree test rings 3,00 / 1,75 / 2,00 / 1,25 / 1,00 m
+ *   (CINH). Each drawing has its own px per metre.
  * - librarySymbol: a symbol with no physical size; never resized.
- * - neither: drawn at the board's scale, like a user's own items.
  *
  * Boring and boogzinker are rebuilt so their length can be dragged while the
  * end circles / the box keep their size. Item ids keep the "inzicht-" prefix:
@@ -30,9 +31,8 @@ const CREATED = Date.UTC(2026, 10, 3)
 
 const source = JSON.parse(readFileSync(join(HERE, 'client-symbols.excalidrawlib'), 'utf8')).libraryItems
 
-/** 65 px on the drawing is 1 m on the ground */
-const TREE_CM_PER_PX = 100 / 65
-const REAL_SIZE = { libraryCmPerPx: TREE_CM_PER_PX }
+/** drawn at this many px per metre on the ground: true to size on a calibrated page */
+const realSize = pxPerMetre => ({ libraryCmPerPx: 100 / pxPerMetre })
 const SYMBOL = { librarySymbol: true }
 
 /** the client's drawing number n, with stable ids and the given scaling */
@@ -92,25 +92,28 @@ const linear = (id, type, x, y, points, style) => ({
 })
 
 const avp = [
-	copy(0, 'avp-rond', 'aVP rond'),
-	copy(1, 'avp-kast', 'aVP kast'),
-	copy(2, 'avp-gebouw', 'aVP gebouw'),
+	// rings of 35 / 70 / 105 / 140 px radius
+	copy(0, 'avp-zoekradius', 'aVP zoekradius (50, 100, 150, 200 m)', realSize(0.7)),
+	// 250 px square, equipment 125 x 67,5 px
+	copy(1, 'avp-buiten', 'aVP buiten, verharding 5,00 x 5,00 m', realSize(50)),
+	// room of 320 x 240 px; the equipment inside is illustrative
+	copy(2, 'avp-binnen', 'aVP binnenruimte 4,00 x 3,00 m', realSize(80)),
 ]
 
-// drawings 3-14: red, blue, green, orange, each 16,5 / 24 / 30 px thick
+// drawings 3-14: red, blue, green, orange, each 16,5 / 24 / 30 px thick = 110 / 160 / 200 mm
 const mantelbuizen = ['rood', 'blauw', 'groen', 'oranje'].flatMap((colour, c) =>
-	['klein', 'middel', 'groot'].map((size, s) =>
-		copy(3 + c * 3 + s, `mantelbuis-${colour}-${size}`, `Mantelbuis ${colour} ${size}`)))
+	[110, 160, 200].map((mm, s) =>
+		copy(3 + c * 3 + s, `mantelbuis-${colour}-${mm}`, `Mantelbuis ${colour} Ø${mm} mm`, realSize(150))))
 
-// drawings 15-20: per class without, then with a PVC root screen (CINH)
+// drawings 15-20: per class without, then with a PVC root screen (CINH), 65 px per metre
 const TREES = [
 	['c1', 'C1 groot >12 m', '3,00 m', '1,75 m'],
 	['c2', 'C2 middel 6-12 m', '2,00 m', '1,25 m'],
 	['c3', 'C3 klein <6 m', '1,00 m', '1,00 m'],
 ]
 const bomen = TREES.flatMap(([slug, label, without, withScreen], t) => [
-	copy(15 + t * 2, `boom-${slug}-zonder`, `Boom ${label}, zonder bescherming (toetsstraal ${without})`, REAL_SIZE),
-	copy(16 + t * 2, `boom-${slug}-met`, `Boom ${label}, met PVC-wortelscherm (toetsstraal ${withScreen})`, REAL_SIZE),
+	copy(15 + t * 2, `boom-${slug}-zonder`, `Boom ${label}, zonder bescherming (toetsstraal ${without})`, realSize(65)),
+	copy(16 + t * 2, `boom-${slug}-met`, `Boom ${label}, met PVC-wortelscherm (toetsstraal ${withScreen})`, realSize(65)),
 ])
 
 const gevelinvoer = [copy(21, 'gevelinvoer', 'Gevelinvoer', SYMBOL)]

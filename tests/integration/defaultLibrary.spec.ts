@@ -41,6 +41,36 @@ describe('bundled In Zicht library', () => {
 		expect(item(id).elements.every(e => e.customData?.libraryCmPerPx === cmPerPx)).toBe(true)
 	})
 
+	/** size of an element in metres on the ground, from the scale its item is drawn at */
+	const metres = (e: { width: number, height: number, customData?: { libraryCmPerPx?: number } }) =>
+		[e.width, e.height].map(px => +(px * e.customData.libraryCmPerPx / 100).toFixed(4))
+
+	it('draws the aVP search rings at 50, 100, 150 and 200 m radius', () => {
+		const rings = item('inzicht-avp-zoekradius').elements.filter(e => e.type === 'ellipse' && e.width > 20)
+		expect(rings.map(e => metres(e)[0] / 2).sort((a, b) => a - b)).toEqual([50, 100, 150, 200])
+	})
+
+	it('draws the outdoor aVP as a 5,00 x 5,00 m area with 2,50 x 1,35 m equipment', () => {
+		const [area, equipment] = item('inzicht-avp-buiten').elements.filter(e => e.type === 'rectangle')
+		expect(metres(area)).toEqual([5, 5])
+		expect(metres(equipment)).toEqual([2.5, 1.35])
+	})
+
+	it('draws the indoor aVP room at 4,00 x 3,00 m', () => {
+		const [room] = item('inzicht-avp-binnen').elements
+		expect(metres(room)).toEqual([4, 3])
+	})
+
+	it.each(['rood', 'blauw', 'groen', 'oranje'])('draws the %s ducts at 110, 160 and 200 mm across', colour => {
+		const ducts = items.filter(i => i.id.startsWith(`inzicht-mantelbuis-${colour}-`))
+		expect(ducts.map(i => i.name)).toEqual([110, 160, 200].map(mm => `Mantelbuis ${colour} Ø${mm} mm`))
+		expect(ducts.map(i => metres(i.elements.find(e => e.type === 'rectangle'))[1])).toEqual([0.11, 0.16, 0.2])
+		for (const duct of ducts) {
+			const scale = duct.elements[0].customData.libraryCmPerPx
+			expect(duct.elements.every(e => e.customData?.libraryCmPerPx === scale)).toBe(true)
+		}
+	})
+
 	it('keeps symbols without a physical size at their own size', () => {
 		for (const id of ['inzicht-gevelinvoer', 'inzicht-boring', 'inzicht-boogzinker']) {
 			expect(item(id).elements.every(e => e.customData?.librarySymbol === true)).toBe(true)

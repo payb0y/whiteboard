@@ -111,9 +111,19 @@ const TREES = [
 	['c2', 'C2 middel 6-12 m', '2,00 m', '1,25 m'],
 	['c3', 'C3 klein <6 m', '1,00 m', '1,00 m'],
 ]
+/**
+ * Vrij Tracé finds a tree by its dashed outer ring (the toetsstraal) and
+ * measures the distance to a trench from it; the ring says the class and
+ * whether there is a root screen, for the Boomcontrole table.
+ */
+const markRing = (item, klasse, scherm) => {
+	const ring = item.elements.find(e => e.type === 'ellipse' && e.strokeStyle === 'dashed')
+	ring.customData = { ...ring.customData, treeRing: { klasse, scherm } }
+	return item
+}
 const bomen = TREES.flatMap(([slug, label, without, withScreen], t) => [
-	copy(15 + t * 2, `boom-${slug}-zonder`, `Boom ${label}, zonder bescherming (toetsstraal ${without})`, realSize(65)),
-	copy(16 + t * 2, `boom-${slug}-met`, `Boom ${label}, met PVC-wortelscherm (toetsstraal ${withScreen})`, realSize(65)),
+	markRing(copy(15 + t * 2, `boom-${slug}-zonder`, `Boom ${label}, zonder bescherming (toetsstraal ${without})`, realSize(65)), slug.toUpperCase(), false),
+	markRing(copy(16 + t * 2, `boom-${slug}-met`, `Boom ${label}, met PVC-wortelscherm (toetsstraal ${withScreen})`, realSize(65)), slug.toUpperCase(), true),
 ])
 
 const gevelinvoer = [copy(21, 'gevelinvoer', 'Gevelinvoer', SYMBOL)]

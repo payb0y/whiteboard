@@ -41,6 +41,23 @@ describe('bundled In Zicht library', () => {
 		expect(item(id).elements.every(e => e.customData?.libraryCmPerPx === cmPerPx)).toBe(true)
 	})
 
+	// Vrij Tracé finds a tree by its ring and measures from it (Boomcontrole)
+	it.each([
+		['inzicht-boom-c1-zonder', 'C1', false],
+		['inzicht-boom-c1-met', 'C1', true],
+		['inzicht-boom-c2-zonder', 'C2', false],
+		['inzicht-boom-c2-met', 'C2', true],
+		['inzicht-boom-c3-zonder', 'C3', false],
+		['inzicht-boom-c3-met', 'C3', true],
+	])('marks the outer ring of %s as the tree (%s, scherm %s)', (id, klasse, scherm) => {
+		const marked = item(id).elements.filter(e => e.customData?.treeRing)
+		expect(marked).toHaveLength(1)
+		expect(marked[0]).toMatchObject({ type: 'ellipse', strokeStyle: 'dashed' })
+		expect(marked[0].customData.treeRing).toEqual({ klasse, scherm })
+		// the outer ring is the largest circle of the drawing
+		expect(marked[0].width).toBe(Math.max(...item(id).elements.map(e => e.width)))
+	})
+
 	/** size of an element in metres on the ground, from the scale its item is drawn at */
 	const metres = (e: { width: number, height: number, customData?: { libraryCmPerPx?: number } }) =>
 		[e.width, e.height].map(px => +(px * e.customData.libraryCmPerPx / 100).toFixed(4))

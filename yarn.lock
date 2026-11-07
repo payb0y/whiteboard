@@ -364,7 +364,7 @@
 
 "@excalidraw/excalidraw@file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz":
   version "0.18.0"
-  resolved "file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz#7987bce0641b9190bed7ec19a298e1198cfd163d"
+  resolved "file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz#ef45ce6e3b98dc89b521d26b11c6ca2556878776"
   dependencies:
     "@braintree/sanitize-url" "6.0.2"
     "@excalidraw/laser-pointer" "1.3.1"
@@ -783,7 +783,7 @@
 
 "@nextcloud/excalidraw@file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz":
   version "0.18.0"
-  resolved "file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz#7987bce0641b9190bed7ec19a298e1198cfd163d"
+  resolved "file:../excalidraw/packages/excalidraw/excalidraw-excalidraw-v0.18.0.tgz#ef45ce6e3b98dc89b521d26b11c6ca2556878776"
   dependencies:
     "@braintree/sanitize-url" "6.0.2"
     "@excalidraw/laser-pointer" "1.3.1"

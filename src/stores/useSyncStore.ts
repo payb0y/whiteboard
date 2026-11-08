@@ -21,6 +21,10 @@ interface SyncStore {
 	// Core state
 	worker: Worker | null
 	isWorkerReady: boolean
+	// Board and scene (`fileId:sceneKey`) the server last accepted
+	savedSceneKey: string | null
+	// When the last server save failed or met the sync lock (409)
+	serverSyncFailedAt: number
 
 	// Actions
 	setWorker: (worker: Worker | null) => void
@@ -35,6 +39,8 @@ export const useSyncStore = create<SyncStore>((set, get) => ({
 	// State
 	worker: null,
 	isWorkerReady: false,
+	savedSceneKey: null,
+	serverSyncFailedAt: 0,
 
 	// Actions
 	setWorker: (worker) => set({ worker }),
@@ -52,7 +58,7 @@ export const useSyncStore = create<SyncStore>((set, get) => ({
 		}
 
 		// Reset the worker ready state
-		set({ isWorkerReady: false })
+		set({ isWorkerReady: false, savedSceneKey: null, serverSyncFailedAt: 0 })
 
 		let syncWorker: Worker | null = null
 
@@ -91,6 +97,12 @@ export const useSyncStore = create<SyncStore>((set, get) => ({
 						break
 
 					case 'SERVER_SYNC_COMPLETE':
+						// A 409 means another save held the lock: this scene may not be stored
+						if (data.skipped) {
+							set({ serverSyncFailedAt: Date.now() })
+						} else if (data.sceneKey) {
+							set({ savedSceneKey: data.sceneKey })
+						}
 						// Use the imported logSyncResult function
 						logSyncResult('server', {
 							status: 'success',
@@ -100,6 +112,7 @@ export const useSyncStore = create<SyncStore>((set, get) => ({
 						break
 
 					case 'SERVER_SYNC_ERROR':
+						set({ serverSyncFailedAt: Date.now() })
 						logger.error('[SyncStore] Worker server sync error:', data.error)
 						// Use the imported logSyncResult function
 						logSyncResult('server', {

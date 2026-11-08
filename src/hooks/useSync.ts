@@ -15,6 +15,7 @@ import { getCurrentUser } from '@nextcloud/auth'
 import { useShallow } from 'zustand/react/shallow'
 import logger from '../utils/logger'
 import { sanitizeAppStateForSync } from '../utils/sanitizeAppState'
+import { computeSceneKey } from '../utils/syncSceneData'
 import type { ExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
 import type { BinaryFiles } from '@excalidraw/excalidraw/types/types'
 import type { CollaborationSocket } from '../types/collaboration'
@@ -138,6 +139,13 @@ export function useSync() {
 			return
 		}
 
+		// Excalidraw reports a change on every re-render. Without this check an
+		// open board saved itself every ten seconds with nobody drawing.
+		if (!forceSync && `${fileId}:${computeSceneKey(excalidrawAPI.getSceneElementsIncludingDeleted(), excalidrawAPI.getFiles())}` === useSyncStore.getState().savedSceneKey) {
+			logger.debug('[Sync] Skipping server sync - scene matches the last saved one')
+			return
+		}
+
 		logSyncResult('server', { status: 'syncing API' })
 		logger.debug('[Sync] Sending SYNC_TO_SERVER message to worker')
 
@@ -158,6 +166,7 @@ export function useSync() {
 				jwt,
 				elements,
 				files,
+				sceneKey: `${fileId}:${computeSceneKey(elements, files)}`,
 			}
 
 			worker.postMessage(message)
@@ -234,6 +243,18 @@ export function useSync() {
 		// Use both leading and trailing edge executions for WebSocket sync
 		throttle(doSyncViaWebSocket, WEBSOCKET_SYNC_DELAY, { leading: true, trailing: true })
 	, [doSyncViaWebSocket])
+
+	// Unchanged scenes are no longer saved again, so a save that failed or met
+	// the sync lock is retried here, at the usual server save interval.
+	const serverSyncFailedAt = useSyncStore(state => state.serverSyncFailedAt)
+	const retriedFailureRef = useRef(0)
+	useEffect(() => {
+		if (!serverSyncFailedAt || serverSyncFailedAt === retriedFailureRef.current) {
+			return
+		}
+		retriedFailureRef.current = serverSyncFailedAt
+		throttledSyncToServerAPI()
+	}, [serverSyncFailedAt, throttledSyncToServerAPI])
 
 	// --- Cursor Sync ---
 	const doSyncCursors = useCallback(

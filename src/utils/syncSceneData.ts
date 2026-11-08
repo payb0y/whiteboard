@@ -4,7 +4,7 @@
  */
 
 import type { ExcalidrawElement } from '@excalidraw/excalidraw/types/element/types'
-import type { AppState } from '@excalidraw/excalidraw/types/types'
+import type { AppState, BinaryFiles } from '@excalidraw/excalidraw/types/types'
 import { isObject } from 'lodash'
 
 /**
@@ -43,6 +43,17 @@ export const computeElementVersionHash = (
 
 	return hash >>> 0 // Ensure positive integer
 }
+
+/**
+ * Identifies a scene by its element versions and file ids (as upstream
+ * Whiteboard 2.1 does), to tell whether it differs from the last saved one.
+ * @param elements all Elements, potentially including deleted ones
+ * @param files the board's files
+ */
+export const computeSceneKey = (
+	elements: readonly ExcalidrawElement[],
+	files: BinaryFiles,
+): string => `${computeElementVersionHash(elements)}:${Object.keys(files || {}).sort().join(',')}`
 
 /**
  *

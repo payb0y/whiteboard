@@ -15,6 +15,11 @@ import { useCollaborationStore } from './useCollaborationStore'
 
 const TOKEN_REFRESH_BUFFER = 90
 
+// Token expiry each room's pending auto-refresh timer was set up for. Kept
+// outside the store: getJWT() runs on every server save, and writing the
+// store each time re-rendered the board, which queued the next save.
+const scheduledExpiries: Record<string, number> = {}
+
 function isTokenFormatValid(token: string): boolean {
 	const parts = token.split('.')
 	return parts.length === 3 && !!parts[0] && !!parts[1] && !!parts[2]
@@ -215,7 +220,9 @@ export const useJWTStore = create<JWTStore>()(
 							console.error('[JWTStore] Failed to parse valid token')
 							useWhiteboardConfigStore.getState().setReadOnly(true)
 						} else if (payload.fileId === fileId) {
-							setupAutoRefresh(fileIdStr)
+							if (scheduledExpiries[fileIdStr] !== get().tokenExpiries[fileIdStr]) {
+								setupAutoRefresh(fileIdStr)
+							}
 
 							if (payload.isFileReadOnly !== undefined) {
 								console.log(`[JWTStore] Setting permissions from valid token: ${payload.isFileReadOnly ? 'read-only' : 'write'} access`)
@@ -514,6 +521,7 @@ export const useJWTStore = create<JWTStore>()(
 				if (autoRefreshTimers[roomId]) {
 					clearTimeout(autoRefreshTimers[roomId])
 				}
+				delete scheduledExpiries[roomId]
 
 				// Get expiry time for this token
 				const expiry = tokenExpiries[roomId]
@@ -531,6 +539,10 @@ export const useJWTStore = create<JWTStore>()(
 				// Set up the timer
 				const timerId = window.setTimeout(async () => {
 					console.log(`[JWTStore] Auto-refresh timer triggered for room ${roomId}`)
+					// This timer is spent; getJWT() may set up the next one
+					if (scheduledExpiries[roomId] === expiry) {
+						delete scheduledExpiries[roomId]
+					}
 
 					// Check if we have a persistent auth error before auto-refreshing
 					const { authError } = useCollaborationStore.getState()
@@ -545,6 +557,8 @@ export const useJWTStore = create<JWTStore>()(
 					get().setupAutoRefresh(roomId)
 				}, timeUntilRefresh)
 
+				scheduledExpiries[roomId] = expiry
+
 				// Store the timer ID
 				set((state) => ({
 					autoRefreshTimers: {
@@ -556,6 +570,7 @@ export const useJWTStore = create<JWTStore>()(
 
 			clearAutoRefresh: (roomId) => {
 				const { autoRefreshTimers } = get()
+				delete scheduledExpiries[roomId]
 
 				// Clear the timer if it exists
 				if (autoRefreshTimers[roomId]) {
@@ -578,6 +593,9 @@ export const useJWTStore = create<JWTStore>()(
 				// Clear all auto-refresh timers
 				Object.values(autoRefreshTimers).forEach(timerId => {
 					clearTimeout(timerId)
+				})
+				Object.keys(scheduledExpiries).forEach(roomId => {
+					delete scheduledExpiries[roomId]
 				})
 
 				// Reset the store state

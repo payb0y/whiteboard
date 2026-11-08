@@ -85,7 +85,7 @@ const handleSyncToLocal = async (data: SyncToLocalMessage) => {
 }
 
 const handleSyncToServer = async (data: SyncToServerMessage) => {
-	const { fileId, url, jwt, elements, files } = data
+	const { fileId, url, jwt, elements, files, sceneKey } = data
 
 	if (!fileId || !url || !jwt) {
 		error('Missing required data for server sync', { fileId, url: !!url, jwt: !!jwt })
@@ -120,6 +120,7 @@ const handleSyncToServer = async (data: SyncToServerMessage) => {
 				skipped: true,
 				duration: 0,
 				elementsCount: elements?.length ?? 0,
+				sceneKey,
 			})
 			return
 		}
@@ -166,6 +167,7 @@ const handleSyncToServer = async (data: SyncToServerMessage) => {
 			duration,
 			elementsCount: elements.length,
 			response: responseData,
+			sceneKey,
 		})
 	} catch (e) {
 		error('Error syncing to server:', e)

@@ -22,6 +22,7 @@ export type WorkerInboundMessage =
 		jwt: string
 		elements: readonly ExcalidrawElement[]
 		files: BinaryFiles
+		sceneKey?: string
 	}
 
 export type WorkerOutboundMessage =
@@ -29,7 +30,7 @@ export type WorkerOutboundMessage =
 	| { type: 'INIT_ERROR'; error: string }
 	| { type: 'LOCAL_SYNC_COMPLETE'; duration: number; elementsCount: number }
 	| { type: 'LOCAL_SYNC_ERROR'; error: string }
-	| { type: 'SERVER_SYNC_COMPLETE'; duration: number; elementsCount: number; success: boolean; response?: unknown; skipped?: boolean }
+	| { type: 'SERVER_SYNC_COMPLETE'; duration: number; elementsCount: number; success: boolean; response?: unknown; skipped?: boolean; sceneKey?: string }
 	| { type: 'SERVER_SYNC_ERROR'; error: string }
 
 export type WorkerMessage = WorkerInboundMessage | WorkerOutboundMessage

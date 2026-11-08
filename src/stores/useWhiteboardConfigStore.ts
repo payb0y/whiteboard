@@ -138,11 +138,13 @@ export const useWhiteboardConfigStore = create<WhiteboardConfigState>()((set, ge
 
 	// Permission actions
 	setReadOnly: (readOnly: boolean) => {
-		if (get().isVersionPreview) {
-			set({ isReadOnly: true })
+		const next = get().isVersionPreview ? true : readOnly
+		// Setting the current value would still notify every subscriber, and
+		// the re-render makes Excalidraw report a change that queues a save.
+		if (get().isReadOnly === next) {
 			return
 		}
-		set({ isReadOnly: readOnly })
+		set({ isReadOnly: next })
 	},
 }))
 

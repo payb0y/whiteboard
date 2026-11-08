@@ -11,7 +11,7 @@ const item = (id: string) => items.find(i => i.id === id)
 describe('bundled In Zicht library', () => {
 	it('has the client\'s groups in order', () => {
 		expect(libs.map(lib => [lib.name, lib.libraryItems.length])).toEqual([
-			['aVP', 3],
+			['AVP', 3],
 			['Mantelbuizen', 12],
 			['Gevelinvoer', 1],
 			['Boring / zinker', 2],
@@ -62,18 +62,18 @@ describe('bundled In Zicht library', () => {
 	const metres = (e: { width: number, height: number, customData?: { libraryCmPerPx?: number } }) =>
 		[e.width, e.height].map(px => +(px * e.customData.libraryCmPerPx / 100).toFixed(4))
 
-	it('draws the aVP search rings at 50, 100, 150 and 200 m radius', () => {
+	it('draws the AVP search rings at 50, 100, 150 and 200 m radius', () => {
 		const rings = item('inzicht-avp-zoekradius').elements.filter(e => e.type === 'ellipse' && e.width > 20)
 		expect(rings.map(e => metres(e)[0] / 2).sort((a, b) => a - b)).toEqual([50, 100, 150, 200])
 	})
 
-	it('draws the outdoor aVP as a 5,00 x 5,00 m area with 2,50 x 1,35 m equipment', () => {
+	it('draws the outdoor AVP as a 5,00 x 5,00 m area with 2,50 x 1,35 m equipment', () => {
 		const [area, equipment] = item('inzicht-avp-buiten').elements.filter(e => e.type === 'rectangle')
 		expect(metres(area)).toEqual([5, 5])
 		expect(metres(equipment)).toEqual([2.5, 1.35])
 	})
 
-	it('draws the indoor aVP room at 4,00 x 3,00 m', () => {
+	it('draws the indoor AVP room at 4,00 x 3,00 m', () => {
 		const [room] = item('inzicht-avp-binnen').elements
 		expect(metres(room)).toEqual([4, 3])
 	})

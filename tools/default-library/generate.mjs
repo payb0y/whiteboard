@@ -9,8 +9,8 @@
  * in the order they drew them); this script names and groups them and sets how
  * each one scales on a calibrated PDF page (customData on every element):
  *
- * - libraryCmPerPx: real size, as agreed with the client: aVP search rings
- *   50-200 m, outdoor aVP 5,00 x 5,00 m, indoor aVP room 4,00 x 3,00 m, ducts
+ * - libraryCmPerPx: real size, as agreed with the client: AVP search rings
+ *   50-200 m, outdoor AVP 5,00 x 5,00 m, indoor AVP room 4,00 x 3,00 m, ducts
  *   110 / 160 / 200 mm across, tree test rings 3,00 / 1,75 / 2,00 / 1,25 / 1,00 m
  *   (CINH). Each drawing has its own px per metre.
  * - librarySymbol: a symbol with no physical size; never resized.
@@ -93,11 +93,11 @@ const linear = (id, type, x, y, points, style) => ({
 
 const avp = [
 	// rings of 35 / 70 / 105 / 140 px radius
-	copy(0, 'avp-zoekradius', 'aVP zoekradius (50, 100, 150, 200 m)', realSize(0.7)),
+	copy(0, 'avp-zoekradius', 'AVP zoekradius (50, 100, 150, 200 m)', realSize(0.7)),
 	// 250 px square, equipment 125 x 67,5 px
-	copy(1, 'avp-buiten', 'aVP buiten, verharding 5,00 x 5,00 m', realSize(50)),
+	copy(1, 'avp-buiten', 'AVP buiten, verharding 5,00 x 5,00 m', realSize(50)),
 	// room of 320 x 240 px; the equipment inside is illustrative
-	copy(2, 'avp-binnen', 'aVP binnenruimte 4,00 x 3,00 m', realSize(80)),
+	copy(2, 'avp-binnen', 'AVP binnenruimte 4,00 x 3,00 m', realSize(80)),
 ]
 
 // drawings 3-14: red, blue, green, orange, each 16,5 / 24 / 30 px thick = 110 / 160 / 200 mm
@@ -165,7 +165,7 @@ zinker.elements = [
 ]
 
 const FILES = [
-	['01-avp', 'aVP', avp],
+	['01-avp', 'AVP', avp],
 	['02-mantelbuizen', 'Mantelbuizen', mantelbuizen],
 	['03-gevelinvoer', 'Gevelinvoer', gevelinvoer],
 	['04-boring-zinker', 'Boring / zinker', [boring, zinker]],

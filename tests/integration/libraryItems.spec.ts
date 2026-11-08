@@ -9,16 +9,16 @@ describe('libraryItemsFromFiles', () => {
 			{
 				basename: '01-avp.excalidrawlib',
 				default: true,
-				name: 'aVP',
-				libraryItems: [{ id: 'inzicht-avp-rond', name: 'aVP rond', created: 5, elements: [rect] }],
+				name: 'AVP',
+				libraryItems: [{ id: 'inzicht-avp-rond', name: 'AVP rond', created: 5, elements: [rect] }],
 			},
 		])
 		expect(items).toEqual([
 			expect.objectContaining({
 				id: 'inzicht-avp-rond',
-				name: 'aVP rond',
+				name: 'AVP rond',
 				status: 'published',
-				group: 'aVP',
+				group: 'AVP',
 				created: 5,
 				elements: [rect],
 			}),

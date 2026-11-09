@@ -25,6 +25,25 @@ describe('libraryItemsFromFiles', () => {
 		])
 	})
 
+	it('keeps the subgroup and caption of a bundled item', () => {
+		const [item] = libraryItemsFromFiles([
+			{
+				default: true,
+				name: 'Bomen',
+				libraryItems: [{ id: 'inzicht-boom', subgroup: 'Zonder', caption: 'C1 3,00 m', elements: [rect] }],
+			},
+		])
+		expect(item).toMatchObject({ group: 'Bomen', subgroup: 'Zonder', caption: 'C1 3,00 m' })
+	})
+
+	it('drops a subgroup or caption that is not text', () => {
+		const [item] = libraryItemsFromFiles([
+			{ default: true, name: 'Bomen', libraryItems: [{ id: 'x', subgroup: 3, caption: {}, elements: [rect] } as never] },
+		])
+		expect(item.subgroup).toBeUndefined()
+		expect(item.caption).toBeUndefined()
+	})
+
 	it('keeps a user\'s own items as they were: unpublished and ungrouped', () => {
 		const [item] = libraryItemsFromFiles([
 			{ basename: 'personal.excalidrawlib', libraryItems: [{ id: 'mine', elements: [rect] }] },

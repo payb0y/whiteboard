@@ -19,6 +19,18 @@ describe('bundled In Zicht library', () => {
 		])
 	})
 
+	it('sorts the trees into the client\'s two groups, large to small', () => {
+		const bomen = libs.find(lib => lib.name === 'Bomen').libraryItems
+		expect(bomen.map(i => [i.id, i.subgroup, i.caption])).toEqual([
+			['inzicht-boom-c1-zonder', 'Zonder wortelbeschermende maatregelen', 'C1 3,00 m'],
+			['inzicht-boom-c2-zonder', 'Zonder wortelbeschermende maatregelen', 'C2 2,00 m'],
+			['inzicht-boom-c3-zonder', 'Zonder wortelbeschermende maatregelen', 'C3 1,00 m'],
+			['inzicht-boom-c1-met', 'Met wortelbeschermende maatregelen', 'C1 1,75 m'],
+			['inzicht-boom-c2-met', 'Met wortelbeschermende maatregelen', 'C2 1,25 m'],
+			['inzicht-boom-c3-met', 'Met wortelbeschermende maatregelen', 'C3 1,00 m'],
+		])
+	})
+
 	it('only holds items the app never saves into a user\'s own library', () => {
 		for (const { id, elements } of items) {
 			expect(id).toMatch(/^inzicht-/)

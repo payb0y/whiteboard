@@ -111,6 +111,9 @@ const TREES = [
 	['c2', 'C2 middel 6-12 m', '2,00 m', '1,25 m'],
 	['c3', 'C3 klein <6 m', '1,00 m', '1,00 m'],
 ]
+/** the client's two groups in the library panel, each from large to small */
+const ZONDER = 'Zonder wortelbeschermende maatregelen'
+const MET = 'Met wortelbeschermende maatregelen'
 /**
  * Vrij Tracé finds a tree by its dashed outer ring (the toetsstraal) and
  * measures the distance to a trench from it; the ring says the class and
@@ -121,10 +124,19 @@ const markRing = (item, klasse, scherm) => {
 	ring.customData = { ...ring.customData, treeRing: { klasse, scherm } }
 	return item
 }
-const bomen = TREES.flatMap(([slug, label, without, withScreen], t) => [
-	markRing(copy(15 + t * 2, `boom-${slug}-zonder`, `Boom ${label}, zonder bescherming (toetsstraal ${without})`, realSize(65)), slug.toUpperCase(), false),
-	markRing(copy(16 + t * 2, `boom-${slug}-met`, `Boom ${label}, met PVC-wortelscherm (toetsstraal ${withScreen})`, realSize(65)), slug.toUpperCase(), true),
-])
+/** a tree item in its group, with its class and test radius under the tile */
+const treeItem = (slug, label, radius, t, scherm) => {
+	const klasse = slug.toUpperCase()
+	const name = scherm
+		? `Boom ${label}, met PVC-wortelscherm (toetsstraal ${radius})`
+		: `Boom ${label}, zonder bescherming (toetsstraal ${radius})`
+	const item = markRing(copy(15 + t * 2 + (scherm ? 1 : 0), `boom-${slug}-${scherm ? 'met' : 'zonder'}`, name, realSize(65)), klasse, scherm)
+	return { ...item, subgroup: scherm ? MET : ZONDER, caption: `${klasse} ${radius}` }
+}
+const bomen = [
+	...TREES.map(([slug, label, without], t) => treeItem(slug, label, without, t, false)),
+	...TREES.map(([slug, label, , withScreen], t) => treeItem(slug, label, withScreen, t, true)),
+]
 
 const gevelinvoer = [copy(21, 'gevelinvoer', 'Gevelinvoer', SYMBOL)]
 

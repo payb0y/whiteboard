@@ -17,13 +17,20 @@ export type LibraryFile = {
 	/** group title of a bundled file */
 	name?: string
 	library?: unknown[][]
-	libraryItems?: Array<Partial<LibraryItem> & { elements?: unknown[] }>
+	libraryItems?: Array<Partial<LibraryItem> & { elements?: unknown[], subgroup?: unknown, caption?: unknown }>
 }
 
 type LibraryItemExtended = LibraryItem & {
 	filename?: string
 	group?: string
+	/** a heading inside the group; its items are drawn to one scale */
+	subgroup?: string
+	/** a short text under the item's tile */
+	caption?: string
 }
+
+/** text, or undefined for anything else a library file may hold */
+const text = (value: unknown) => (typeof value === 'string' && value ? value : undefined)
 
 /**
  * Turn the server's library files into library items. The bundled default
@@ -63,6 +70,14 @@ export const libraryItemsFromFiles = (files: LibraryFile[]): LibraryItemExtended
 			}
 			if (file.default && file.name) {
 				libraryItem.group = file.name
+			}
+			const subgroup = text(item.subgroup)
+			if (subgroup) {
+				libraryItem.subgroup = subgroup
+			}
+			const caption = text(item.caption)
+			if (caption) {
+				libraryItem.caption = caption
 			}
 			items.push(libraryItem)
 		}

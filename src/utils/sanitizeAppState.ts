@@ -15,6 +15,8 @@ const NON_TRANSFERRED_KEYS: Array<keyof AppState | string> = [
 	// Vrij Tracé: this user's tool state and colleagues' edit holds
 	'vrijTrace',
 	'vrijTraceRemoteHolds',
+	// a PDF import runs in one browser; saved, it reloads as a page nobody can finish
+	'pdfImport',
 ]
 
 export function sanitizeAppStateForSync(state: Partial<AppState> | AppState | null | undefined): Partial<AppState> {

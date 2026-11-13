@@ -650,6 +650,7 @@ export default function App({
 					initialData={initialDataPromise}
 					generateIdForFile={generateIdForFile}
 					pdfApiUrl={pdfApiUrl}
+					maxPdfFileSizeMB={maxImageSizeMb ?? undefined}
 					vrijTraceEnabled={vrijTraceEnabled && !isReadOnly && !isVersionPreview}
 					vrijTraceUser={vrijTraceUser}
 					onVrijTraceEditing={onVrijTraceEditing}

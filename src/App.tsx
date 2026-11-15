@@ -58,6 +58,10 @@ import { useDisableExternalLibraries } from './hooks/useDisableExternalLibraries
 
 const Excalidraw = memo(ExcalidrawComponent)
 
+// The largest PDF that can be imported, in MB. The PDF converter refuses
+// larger files too (its MAX_PDF_MB); this says so before the upload starts.
+const MAX_PDF_IMPORT_MB = 30
+
 const MemoizedNetworkStatusIndicator = memo(NetworkStatusIndicator)
 const MemoizedAuthErrorNotification = memo(AuthErrorNotification)
 const MemoizedExcalidrawMenu = memo(ExcalidrawMenu)
@@ -650,7 +654,7 @@ export default function App({
 					initialData={initialDataPromise}
 					generateIdForFile={generateIdForFile}
 					pdfApiUrl={pdfApiUrl}
-					maxPdfFileSizeMB={maxImageSizeMb ?? undefined}
+					maxPdfFileSizeMB={MAX_PDF_IMPORT_MB}
 					vrijTraceEnabled={vrijTraceEnabled && !isReadOnly && !isVersionPreview}
 					vrijTraceUser={vrijTraceUser}
 					onVrijTraceEditing={onVrijTraceEditing}
